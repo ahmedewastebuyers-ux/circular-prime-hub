@@ -59,11 +59,11 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href="tel:+919999999999"
+            href="tel:+919880112263"
             className="inline-flex items-center gap-2 text-sm font-semibold text-charcoal"
           >
             <Phone className="h-4 w-4 text-forest" />
-            +91 99999 99999
+            +91 98801 12263
           </a>
           <a
             href="#quote"

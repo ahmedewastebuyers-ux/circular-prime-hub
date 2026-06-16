@@ -99,7 +99,7 @@ export const Route = createFileRoute("/")({
           },
           contactPoint: {
             "@type": "ContactPoint",
-            telephone: "+91-99999-99999",
+            telephone: "+91-98801-12263",
             contactType: "Sales",
             areaServed: "IN",
             availableLanguage: ["en", "hi"],
@@ -1019,7 +1019,7 @@ function Contact() {
   return (
     <Section id="contact" eyebrow="Contact" title="Speak to our enterprise desk.">
       <div className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-3">
-        <ContactCard icon={PhoneCall} title="Sales hotline" lines={["+91 99999 99999", "Mon–Sat · 9am–7pm IST"]} />
+        <ContactCard icon={PhoneCall} title="Sales hotline" lines={["+91 98801 12263", "Mon–Sat · 9am–7pm IST"]} />
         <ContactCard icon={Mail} title="Enterprise email" lines={["enterprise@vertgreen.in", "Response within 4 hours"]} />
         <ContactCard icon={MapPin} title="Corporate office" lines={["Plot 42, Industrial Area Phase II", "Gurugram, Haryana 122016"]} />
       </div>
