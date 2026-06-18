@@ -53,14 +53,14 @@ import t3 from "@/assets/testimonial-3.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "VertGreen — Corporate E-Waste Disposal & IT Asset Recovery in India" },
+      { title: "E-Waste Buyers — Corporate E-Waste Disposal & IT Asset Recovery in India" },
       {
         name: "description",
         content:
           "India's premium B2B e-waste management partner. Secure data destruction, IT asset recovery, data center decommissioning, and CPCB-compliant recycling for enterprises, BFSI, manufacturing, healthcare, telecom and government.",
       },
       { name: "keywords", content: "corporate e-waste disposal India, IT asset recovery services, enterprise asset buyback, data center decommissioning, secure data destruction, corporate electronics recycling, e-waste management company India, IT asset disposal services, enterprise e-waste solutions" },
-      { property: "og:title", content: "VertGreen — Corporate E-Waste & IT Asset Recovery" },
+      { property: "og:title", content: "E-Waste Buyers — Corporate E-Waste & IT Asset Recovery" },
       {
         property: "og:description",
         content:
@@ -84,7 +84,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "VertGreen Asset Recovery",
+          name: "E-Waste Buyers",
           url: "https://vertgreen.in",
           logo: "https://vertgreen.in/logo.png",
           description:
@@ -702,7 +702,7 @@ const testimonials = [
     name: "Rajesh Iyer",
     role: "IT Director, Fintech Enterprise",
     quote:
-      "VertGreen handled the disposal of 800+ laptops and 60 servers across our offices with the kind of documentation our internal auditors expect. Zero gaps.",
+      "E-Waste Buyers handled the disposal of 800+ laptops and 60 servers across our offices with the kind of documentation our internal auditors expect. Zero gaps.",
   },
   {
     img: t2,
@@ -1026,7 +1026,7 @@ function Contact() {
 
       <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-card">
         <iframe
-          title="VertGreen office location"
+          title="E-Waste Buyers office location"
           src="https://www.openstreetmap.org/export/embed.html?bbox=77.0%2C28.45%2C77.12%2C28.52&layer=mapnik&marker=28.4595%2C77.0266"
           className="h-80 w-full"
           loading="lazy"
