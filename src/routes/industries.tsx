@@ -28,6 +28,8 @@ function IndustriesPage() {
           eyebrow="Industries"
           title="Industry-specific solutions."
           subtitle="Compliance, security and recovery tuned to the operating constraints of your sector."
+          bgImage="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1920&q=70"
+          bgAlt="Enterprise server racks and corporate IT infrastructure"
         />
         <section className="section-y">
           <div className="container-px mx-auto max-w-7xl">
@@ -35,17 +37,32 @@ function IndustriesPage() {
               {industries.map((i) => (
                 <div
                   key={i.name}
-                  className="flex flex-col rounded-2xl border border-border bg-card p-8 transition-all hover:border-forest/40 hover:shadow-lg hover:shadow-forest/5"
+                  className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:border-forest/40 hover:shadow-lg hover:shadow-forest/5"
                 >
-                  <span className="grid h-12 w-12 place-items-center rounded-lg bg-forest/10 text-forest">
-                    <i.icon className="h-5 w-5" />
-                  </span>
-                  <h2 className="font-display mt-6 text-lg font-bold text-charcoal">{i.name}</h2>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{i.desc}</p>
-                  <p className="mt-5 text-xs font-semibold text-forest">{i.ex}</p>
+                  <div className="relative aspect-[16/10] overflow-hidden bg-charcoal">
+                    <img
+                      src={i.image}
+                      alt={i.alt}
+                      width={800}
+                      height={500}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-full w-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent" />
+                  </div>
+                  <div className="flex flex-1 flex-col p-7">
+                    <span className="grid h-11 w-11 place-items-center rounded-lg bg-forest/10 text-forest">
+                      <i.icon className="h-5 w-5" />
+                    </span>
+                    <h2 className="font-display mt-5 text-lg font-bold text-charcoal">{i.name}</h2>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{i.desc}</p>
+                    <p className="mt-4 text-xs font-semibold text-forest">{i.ex}</p>
+                  </div>
                 </div>
               ))}
             </div>
+
 
             <div className="mt-16 text-center">
               <Link

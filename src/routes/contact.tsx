@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/site/SiteFooter";
 import { StickyActions } from "@/components/site/StickyActions";
 import { PageHero, PageShell } from "@/components/site/PageHero";
 import { QuoteForm, InspectionForm } from "@/components/site/QuoteForm";
-import { PHONE, PHONE_TEL, EMAIL, WHATSAPP } from "@/lib/site-data";
+import { PHONE, PHONE_TEL, EMAIL, WHATSAPP, siteImages } from "@/lib/site-data";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -29,7 +29,10 @@ function ContactPage() {
           eyebrow="Contact"
           title="Speak to our enterprise desk."
           subtitle="Request a formal quote, schedule a free site inspection, or reach us directly. We respond within one business day."
+          bgImage={siteImages.contact.src}
+          bgAlt={siteImages.contact.alt}
         />
+
 
         <section className="section-y">
           <div className="container-px mx-auto max-w-7xl">

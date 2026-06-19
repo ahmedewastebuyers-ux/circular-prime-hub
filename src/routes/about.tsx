@@ -4,6 +4,8 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { StickyActions } from "@/components/site/StickyActions";
 import { PageHero, PageShell } from "@/components/site/PageHero";
+import { siteImages } from "@/lib/site-data";
+
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -34,9 +36,23 @@ function AboutPage() {
           eyebrow="About us"
           title="Corporate asset recovery, not scrap."
           subtitle="Built for India's enterprises that demand transparency, security and certified compliance from every disposal."
+          bgImage={siteImages.about.src}
+          bgAlt={siteImages.about.alt}
         />
         <section className="section-y">
           <div className="container-px mx-auto max-w-5xl">
+            <div className="mb-14 overflow-hidden rounded-2xl border border-border">
+              <img
+                src={siteImages.about.src}
+                alt={siteImages.about.alt}
+                width={1600}
+                height={900}
+                loading="lazy"
+                decoding="async"
+                className="h-72 w-full object-cover md:h-96"
+              />
+            </div>
+
             <div className="prose-lg space-y-6 text-base leading-relaxed text-muted-foreground md:text-lg">
               <p>
                 E-Waste Buyers was founded to professionalise corporate e-waste in India.

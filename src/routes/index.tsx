@@ -11,8 +11,8 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { StickyActions } from "@/components/site/StickyActions";
 import { Section } from "@/components/site/Section";
-import { industries, services, why, cases, faqs, PHONE_TEL, WHATSAPP } from "@/lib/site-data";
-import heroImg from "@/assets/hero-datacenter.jpg";
+import { industries, services, why, cases, faqs, siteImages, PHONE_TEL, WHATSAPP } from "@/lib/site-data";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -89,15 +89,19 @@ function Hero() {
     <section className="relative isolate overflow-hidden bg-charcoal pt-28 text-white md:pt-36">
       <div className="absolute inset-0 -z-10">
         <img
-          src={heroImg}
-          alt="Enterprise data center decommissioning"
+          src={siteImages.hero.src}
+          alt={siteImages.hero.alt}
           width={1920}
           height={1280}
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
           className="h-full w-full object-cover opacity-30"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/85 to-charcoal/40" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,oklch(0.38_0.07_160_/_0.35),transparent_60%)]" />
       </div>
+
 
       <div className="container-px mx-auto max-w-7xl pb-24 md:pb-36">
         <div className="max-w-3xl">
@@ -254,7 +258,18 @@ function Calculator() {
               </Field>
             </div>
 
-            <div className="flex flex-col justify-between bg-charcoal p-8 text-white md:p-12">
+            <div className="relative isolate flex flex-col justify-between overflow-hidden bg-charcoal p-8 text-white md:p-12">
+              <img
+                src={siteImages.calculator.src}
+                alt={siteImages.calculator.alt}
+                width={1200}
+                height={900}
+                loading="lazy"
+                decoding="async"
+                className="absolute inset-0 -z-10 h-full w-full object-cover opacity-20"
+              />
+              <div className="absolute inset-0 -z-10 bg-gradient-to-b from-charcoal/80 to-charcoal" />
+
               <div>
                 <span className="text-xs font-semibold uppercase tracking-[0.18em] text-forest">
                   Estimated recovery value
@@ -317,16 +332,31 @@ function IndustriesPreview() {
         {six.map((i) => (
           <div
             key={i.name}
-            className="group flex flex-col rounded-2xl border border-border bg-card p-8 transition-all hover:border-forest/40 hover:shadow-lg hover:shadow-forest/5"
+            className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:border-forest/40 hover:shadow-lg hover:shadow-forest/5"
           >
-            <span className="grid h-12 w-12 place-items-center rounded-lg bg-forest/10 text-forest transition-colors group-hover:bg-forest group-hover:text-forest-foreground">
-              <i.icon className="h-5 w-5" />
-            </span>
-            <h3 className="font-display mt-6 text-lg font-bold text-charcoal">{i.name}</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{i.desc}</p>
+            <div className="relative aspect-[16/10] overflow-hidden bg-charcoal">
+              <img
+                src={i.image}
+                alt={i.alt}
+                width={800}
+                height={500}
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent" />
+            </div>
+            <div className="flex flex-col p-7">
+              <span className="grid h-11 w-11 place-items-center rounded-lg bg-forest/10 text-forest transition-colors group-hover:bg-forest group-hover:text-forest-foreground">
+                <i.icon className="h-5 w-5" />
+              </span>
+              <h3 className="font-display mt-5 text-lg font-bold text-charcoal">{i.name}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{i.desc}</p>
+            </div>
           </div>
         ))}
       </div>
+
       <div className="mt-10 text-center">
         <Link
           to="/industries"
@@ -352,20 +382,35 @@ function ServicesPreview() {
           </h2>
         </div>
 
-        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {four.map((s) => (
             <div
               key={s.title}
-              className="group flex flex-col bg-charcoal p-8 transition-colors hover:bg-charcoal/70"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-charcoal/60 transition-colors hover:border-forest/40"
             >
-              <span className="grid h-12 w-12 place-items-center rounded-lg bg-forest/15 text-forest transition-colors group-hover:bg-forest group-hover:text-forest-foreground">
-                <s.icon className="h-5 w-5" />
-              </span>
-              <h3 className="font-display mt-7 text-lg font-bold">{s.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/65">{s.desc}</p>
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <img
+                  src={s.image}
+                  alt={s.alt}
+                  width={800}
+                  height={500}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent" />
+              </div>
+              <div className="flex flex-1 flex-col p-7">
+                <span className="grid h-11 w-11 place-items-center rounded-lg bg-forest/15 text-forest transition-colors group-hover:bg-forest group-hover:text-forest-foreground">
+                  <s.icon className="h-5 w-5" />
+                </span>
+                <h3 className="font-display mt-5 text-lg font-bold">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/65">{s.desc}</p>
+              </div>
             </div>
           ))}
         </div>
+
 
         <div className="mt-10 text-center">
           <Link
@@ -427,13 +472,23 @@ function CasesPreview() {
               className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-forest/5"
             >
               <div className="relative h-44 overflow-hidden bg-charcoal">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,oklch(0.38_0.07_160_/_0.4),transparent_60%)]" />
+                <img
+                  src={c.image}
+                  alt={c.alt}
+                  width={800}
+                  height={400}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/30 to-transparent" />
                 <div className="absolute inset-x-6 bottom-6">
                   <span className="inline-flex rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-white backdrop-blur">
                     {c.tag}
                   </span>
                 </div>
               </div>
+
               <div className="flex flex-1 flex-col p-7">
                 <h3 className="font-display text-lg font-bold leading-snug text-charcoal">
                   {c.title}

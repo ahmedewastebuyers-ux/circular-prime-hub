@@ -28,6 +28,8 @@ function ServicesPage() {
           eyebrow="Services"
           title="End-to-end enterprise asset retirement."
           subtitle="Eight integrated services, one accountable partner — from valuation through certified disposal."
+          bgImage="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1920&q=70"
+          bgAlt="Technician decommissioning enterprise server equipment"
         />
         <section className="section-y">
           <div className="container-px mx-auto max-w-7xl">
@@ -35,16 +37,31 @@ function ServicesPage() {
               {services.map((s) => (
                 <div
                   key={s.title}
-                  className="flex flex-col rounded-2xl border border-border bg-card p-8 transition-all hover:border-forest/40 hover:shadow-lg hover:shadow-forest/5"
+                  className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:border-forest/40 hover:shadow-lg hover:shadow-forest/5"
                 >
-                  <span className="grid h-12 w-12 place-items-center rounded-lg bg-forest/10 text-forest">
-                    <s.icon className="h-5 w-5" />
-                  </span>
-                  <h2 className="font-display mt-6 text-lg font-bold text-charcoal">{s.title}</h2>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                  <div className="relative aspect-[16/10] overflow-hidden bg-charcoal">
+                    <img
+                      src={s.image}
+                      alt={s.alt}
+                      width={800}
+                      height={500}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-full w-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent" />
+                  </div>
+                  <div className="flex flex-1 flex-col p-7">
+                    <span className="grid h-11 w-11 place-items-center rounded-lg bg-forest/10 text-forest">
+                      <s.icon className="h-5 w-5" />
+                    </span>
+                    <h2 className="font-display mt-5 text-lg font-bold text-charcoal">{s.title}</h2>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
+
 
             <div className="mt-16 rounded-3xl border border-border bg-charcoal p-10 text-center text-white md:p-16">
               <h3 className="font-display text-2xl font-bold md:text-3xl">
