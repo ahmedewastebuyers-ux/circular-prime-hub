@@ -12,4 +12,9 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Enable Nitro with the Vercel preset so `vite build` emits a Vercel-compatible
+  // SSR bundle (.vercel/output) instead of the default Cloudflare Workers output.
+  nitro: {
+    preset: process.env.VERCEL ? "vercel" : undefined,
+  },
 });
