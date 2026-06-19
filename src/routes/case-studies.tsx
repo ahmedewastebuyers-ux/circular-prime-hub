@@ -28,6 +28,8 @@ function CaseStudiesPage() {
           eyebrow="Case studies"
           title="Enterprises that trust our process."
           subtitle="Real engagements. Real numbers. Audit-clear outcomes."
+          bgImage="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1920&q=70"
+          bgAlt="Enterprise data center server racks"
         />
         <section className="section-y">
           <div className="container-px mx-auto max-w-7xl">
@@ -38,13 +40,23 @@ function CaseStudiesPage() {
                   className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-forest/5"
                 >
                   <div className="relative h-44 overflow-hidden bg-charcoal">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,oklch(0.38_0.07_160_/_0.4),transparent_60%)]" />
+                    <img
+                      src={c.image}
+                      alt={c.alt}
+                      width={800}
+                      height={400}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/30 to-transparent" />
                     <div className="absolute inset-x-6 bottom-6">
                       <span className="inline-flex rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-white backdrop-blur">
                         {c.tag}
                       </span>
                     </div>
                   </div>
+
                   <div className="flex flex-1 flex-col p-7">
                     <h3 className="font-display text-lg font-bold leading-snug text-charcoal">
                       {c.title}
