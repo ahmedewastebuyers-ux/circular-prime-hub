@@ -218,7 +218,6 @@ export const certs = [
   { code: "ISO 27001", label: "Information Security" },
   { code: "OHSAS 18001", label: "Occupational H&S" },
   { code: "R2v3", label: "Responsible Recycling" },
-  { code: "R2v3", label: "Responsible Recycling" },
   { code: "E-Waste Rules 2022", label: "MoEF&CC Compliant" },
 ];
 
