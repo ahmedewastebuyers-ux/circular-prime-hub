@@ -9,10 +9,10 @@ import { services } from "@/lib/site-data";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Corporate Services — E-Waste Buyers" },
-      { name: "description", content: "IT asset recovery, secure data destruction, reverse logistics, data center decommissioning, ESG support, enterprise buyback and compliance reporting." },
+      { title: "Asset Recovery Services — E-Waste Buyers" },
+      { name: "description", content: "IT asset recovery, bulk laptop procurement, server recovery, networking equipment purchase, data center decommissioning, industrial electronics recovery and corporate electronics buyback." },
       { property: "og:title", content: "Services — E-Waste Buyers" },
-      { property: "og:description", content: "End-to-end enterprise IT lifecycle retirement services." },
+      { property: "og:description", content: "Bulk buyback of servers, laptops, networking, industrial electronics and corporate e-waste." },
     ],
     links: [{ rel: "canonical", href: "/services" }],
   }),
@@ -26,10 +26,10 @@ function ServicesPage() {
       <main>
         <PageHero
           eyebrow="Services"
-          title="End-to-end enterprise asset retirement."
-          subtitle="Eight integrated services, one accountable partner — from valuation through certified disposal."
+          title="We buy and recover retired enterprise hardware."
+          subtitle="From single-site refresh pickups to multi-state data center sunsets — one accountable buyback partner."
           bgImage="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1920&q=70"
-          bgAlt="Technician decommissioning enterprise server equipment"
+          bgAlt="Retired enterprise server equipment staged for asset recovery"
         />
         <section className="section-y">
           <div className="container-px mx-auto max-w-7xl">

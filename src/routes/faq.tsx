@@ -11,7 +11,7 @@ export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
       { title: "FAQ — E-Waste Buyers" },
-      { name: "description", content: "Answers to common questions about corporate e-waste disposal, IT asset recovery, data destruction, logistics and compliance documentation." },
+      { name: "description", content: "Answers to common questions about corporate e-waste procurement, IT asset recovery, bulk laptop and server buyback, logistics and compliance documentation." },
       { property: "og:title", content: "FAQ — E-Waste Buyers" },
       { property: "og:description", content: "Everything procurement, IT and compliance teams want to know." },
     ],

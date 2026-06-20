@@ -4,11 +4,13 @@ import { EMAIL, PHONE, PHONE_TEL } from "@/lib/site-data";
 
 const serviceLinks = [
   "IT Asset Recovery",
-  "Secure Data Destruction",
-  "E-Waste Collection",
+  "E-Waste Collection & Procurement",
   "Data Center Decommissioning",
-  "Reverse Logistics",
-  "Enterprise Buyback",
+  "Industrial Electronics Recovery",
+  "Bulk Laptop Procurement",
+  "Server Recovery",
+  "Networking Equipment Purchase",
+  "Corporate Electronics Buyback",
 ];
 
 const companyLinks: { label: string; to: "/services" | "/industries" | "/compliance" | "/case-studies" | "/about" | "/faq" | "/contact" }[] = [
@@ -39,8 +41,8 @@ export function SiteFooter() {
               </span>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/70">
-              India's trusted partner for corporate e-waste disposal, IT asset recovery,
-              secure data destruction, and data center decommissioning.
+              India's trusted buyer of corporate e-waste, retired IT assets,
+              servers, networking equipment and industrial electronics.
             </p>
             <div className="mt-6 flex gap-3">
               {[Linkedin, Twitter, Facebook].map((Icon, i) => (

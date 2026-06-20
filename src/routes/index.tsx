@@ -16,17 +16,17 @@ import { industries, services, why, cases, faqs, siteImages, PHONE_TEL, WHATSAPP
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "E-Waste Buyers — Corporate E-Waste Disposal & IT Asset Recovery in India" },
+      { title: "E-Waste Buyers — IT Asset Recovery & Corporate E-Waste Procurement in India" },
       {
         name: "description",
         content:
-          "India's premium B2B partner for IT asset recovery, secure data destruction, data center decommissioning and CPCB-compliant e-waste disposal. Pan-India service for enterprises.",
+          "We buy retired IT assets, servers, networking equipment, laptops, industrial electronics and corporate e-waste in bulk. Pan-India IT asset recovery and CPCB-compliant procurement.",
       },
-      { property: "og:title", content: "E-Waste Buyers — Corporate IT Asset Recovery" },
+      { property: "og:title", content: "E-Waste Buyers — Corporate IT Asset Recovery & Procurement" },
       {
         property: "og:description",
         content:
-          "Secure, compliant, profitable e-waste disposal and IT asset recovery for India's enterprises.",
+          "Bulk buyback of corporate IT assets, servers, networking gear, laptops and industrial electronics across India.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -109,13 +109,14 @@ function Hero() {
           </span>
 
           <h1 className="font-display mt-8 text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
-            Corporate E-Waste Disposal{" "}
-            <span className="text-forest">&</span> IT Asset Recovery
+            We Buy Retired IT Assets{" "}
+            <span className="text-forest">&</span> Corporate E-Waste
           </h1>
 
           <p className="mt-7 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
-            We help businesses recover value from retired IT assets through secure
-            collection, data destruction, asset recovery, and certified recycling.
+            Bulk buyback of servers, networking equipment, laptops, industrial
+            electronics and corporate e-waste — with transparent valuation and
+            pan-India pickup.
           </p>
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
