@@ -62,10 +62,11 @@ function AboutPage() {
               </p>
               <p>
                 We built the opposite: a B2B-first operation with serial-level asset
-                grading, NIST 800-88 data destruction, insured pan-India logistics and
-                audit-grade reporting. Today we serve enterprises across IT, BFSI,
-                healthcare, manufacturing, telecom and government — from single-site
-                refreshes to multi-state data center sunsets.
+                grading, bulk buyback of servers, networking and laptops, insured
+                pan-India logistics and audit-grade reporting. Today we serve
+                enterprises across IT, BFSI, healthcare, manufacturing, telecom
+                and government — from single-site refreshes to multi-state data
+                center sunsets.
               </p>
             </div>
 

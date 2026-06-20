@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ShieldCheck, FileCheck2, Recycle, Lock } from "lucide-react";
+import { ArrowRight, ShieldCheck, FileCheck2, Recycle, ClipboardCheck } from "lucide-react";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { StickyActions } from "@/components/site/StickyActions";
@@ -10,7 +10,7 @@ export const Route = createFileRoute("/compliance")({
   head: () => ({
     meta: [
       { title: "Compliance & Certifications — E-Waste Buyers" },
-      { name: "description", content: "CPCB authorised, ISO 14001 / 9001 / 27001 certified. Audit-ready documentation, NIST 800-88 data destruction, E-Waste Rules 2022 compliant." },
+      { name: "description", content: "CPCB authorised, ISO 14001 / 9001 / 27001 certified. Audit-ready documentation, serialised chain-of-custody and E-Waste Rules 2022 compliant." },
       { property: "og:title", content: "Compliance — E-Waste Buyers" },
       { property: "og:description", content: "Audit-ready by design. Recognised by every authority that matters." },
     ],
@@ -61,9 +61,9 @@ function CompliancePage() {
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Serial-linked certificates of recycling for every asset disposed.</p>
                 </div>
                 <div>
-                  <Lock className="h-8 w-8 text-forest" />
-                  <h3 className="font-display mt-5 text-lg font-bold text-charcoal">Data destruction certificates</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Per-drive destruction certificate with method, timestamp and operator.</p>
+                  <ClipboardCheck className="h-8 w-8 text-forest" />
+                  <h3 className="font-display mt-5 text-lg font-bold text-charcoal">Chain-of-custody reports</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Serialised tracking from pickup to processing — auditable end to end.</p>
                 </div>
               </div>
             </div>
