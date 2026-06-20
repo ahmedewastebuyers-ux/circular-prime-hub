@@ -1,8 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import {
   ArrowRight,
-  CheckCircle2,
   ChevronDown,
   MessageCircle,
   Calendar,
@@ -70,7 +69,6 @@ function HomePage() {
       <SiteHeader />
       <main>
         <Hero />
-        <Calculator />
         <IndustriesPreview />
         <ServicesPreview />
         <WhyUs />
@@ -142,183 +140,9 @@ function Hero() {
   );
 }
 
-/* ---------- Calculator ---------- */
-const assetTypes = [
-  { key: "server", label: "Enterprise Server", low: 8000, high: 35000 },
-  { key: "laptop", label: "Business Laptop", low: 3500, high: 18000 },
-  { key: "desktop", label: "Desktop / Workstation", low: 2200, high: 12000 },
-  { key: "storage", label: "Storage Array", low: 12000, high: 90000 },
-  { key: "switch", label: "Network Switch / Router", low: 1500, high: 25000 },
-  { key: "ups", label: "UPS / Battery", low: 1800, high: 15000 },
-];
 
-function Calculator() {
-  const [type, setType] = useState(assetTypes[0].key);
-  const [qty, setQty] = useState(50);
-  const [condition, setCondition] = useState<"working" | "partial" | "scrap">("working");
-  const [age, setAge] = useState<"0-3" | "3-6" | "6+">("3-6");
 
-  const { low, high } = useMemo(() => {
-    const a = assetTypes.find((x) => x.key === type)!;
-    const cond = condition === "working" ? 1 : condition === "partial" ? 0.55 : 0.22;
-    const ageMul = age === "0-3" ? 1 : age === "3-6" ? 0.7 : 0.4;
-    const m = cond * ageMul;
-    return { low: Math.round(a.low * m * qty), high: Math.round(a.high * m * qty) };
-  }, [type, qty, condition, age]);
 
-  const fmt = (n: number) =>
-    new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 }).format(n);
-
-  return (
-    <section className="section-y bg-sand/30">
-      <div className="container-px mx-auto max-w-7xl">
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="eyebrow">Asset Recovery Value Estimator</span>
-          <h2 className="font-display mt-3 text-3xl font-bold tracking-tight text-charcoal md:text-4xl lg:text-5xl">
-            See what your retired IT assets are worth.
-          </h2>
-          <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            Instant indicative range. Final valuation is confirmed after a free site inspection.
-          </p>
-        </div>
-
-        <div className="mt-14 overflow-hidden rounded-3xl border border-border bg-card shadow-xl shadow-charcoal/5">
-          <div className="grid lg:grid-cols-[1.3fr_1fr]">
-            <div className="space-y-7 p-8 md:p-12">
-              <Field label="Asset type">
-                <select
-                  value={type}
-                  onChange={(e) => setType(e.target.value)}
-                  className="h-12 w-full rounded-md border border-input bg-background px-3 text-sm"
-                >
-                  {assetTypes.map((a) => (
-                    <option key={a.key} value={a.key}>{a.label}</option>
-                  ))}
-                </select>
-              </Field>
-
-              <Field label={`Quantity: ${qty} units`}>
-                <input
-                  type="range"
-                  min={1}
-                  max={1000}
-                  step={1}
-                  value={qty}
-                  onChange={(e) => setQty(Number(e.target.value))}
-                  className="w-full accent-forest"
-                />
-              </Field>
-
-              <Field label="Condition">
-                <div className="grid grid-cols-3 gap-2">
-                  {[
-                    { k: "working", l: "Working" },
-                    { k: "partial", l: "Partial" },
-                    { k: "scrap", l: "Scrap / Dead" },
-                  ].map((o) => (
-                    <button
-                      key={o.k}
-                      type="button"
-                      onClick={() => setCondition(o.k as "working" | "partial" | "scrap")}
-                      className={
-                        "h-11 rounded-md border text-sm font-medium transition-colors " +
-                        (condition === o.k
-                          ? "border-forest bg-forest text-forest-foreground"
-                          : "border-input bg-background text-charcoal hover:border-forest/50")
-                      }
-                    >
-                      {o.l}
-                    </button>
-                  ))}
-                </div>
-              </Field>
-
-              <Field label="Asset age">
-                <div className="grid grid-cols-3 gap-2">
-                  {[
-                    { k: "0-3", l: "0–3 years" },
-                    { k: "3-6", l: "3–6 years" },
-                    { k: "6+", l: "6+ years" },
-                  ].map((o) => (
-                    <button
-                      key={o.k}
-                      type="button"
-                      onClick={() => setAge(o.k as "0-3" | "3-6" | "6+")}
-                      className={
-                        "h-11 rounded-md border text-sm font-medium transition-colors " +
-                        (age === o.k
-                          ? "border-forest bg-forest text-forest-foreground"
-                          : "border-input bg-background text-charcoal hover:border-forest/50")
-                      }
-                    >
-                      {o.l}
-                    </button>
-                  ))}
-                </div>
-              </Field>
-            </div>
-
-            <div className="relative isolate flex flex-col justify-between overflow-hidden bg-charcoal p-8 text-white md:p-12">
-              <img
-                src={siteImages.calculator.src}
-                alt={siteImages.calculator.alt}
-                width={1200}
-                height={900}
-                loading="lazy"
-                decoding="async"
-                className="absolute inset-0 -z-10 h-full w-full object-cover opacity-20"
-              />
-              <div className="absolute inset-0 -z-10 bg-gradient-to-b from-charcoal/80 to-charcoal" />
-
-              <div>
-                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-forest">
-                  Estimated recovery value
-                </span>
-                <div className="mt-5 font-display text-3xl font-extrabold leading-tight md:text-4xl">
-                  {fmt(low)} <span className="text-white/40">–</span> {fmt(high)}
-                </div>
-                <p className="mt-5 text-sm leading-relaxed text-white/65">
-                  Indicative range only. Final valuation depends on physical inspection
-                  and serial-level grading.
-                </p>
-                <ul className="mt-7 space-y-2.5 text-sm text-white/80">
-                  {[
-                    "Formal valuation within 48 hours",
-                    "Free site inspection for orders ≥ 100 units",
-                    "PAN-India insured collection",
-                  ].map((x) => (
-                    <li key={x} className="flex items-start gap-2">
-                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-forest" />
-                      {x}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <Link
-                to="/contact"
-                hash="quote"
-                className="mt-10 inline-flex h-12 items-center justify-center gap-2 rounded-md bg-forest text-sm font-semibold text-forest-foreground transition-colors hover:bg-forest/90"
-              >
-                Request Formal Assessment <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Field({ label, children }: { label: string; children: React.ReactNode }) {
-  return (
-    <label className="block">
-      <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-        {label}
-      </span>
-      <div className="mt-2">{children}</div>
-    </label>
-  );
-}
 
 /* ---------- Industries (6) ---------- */
 function IndustriesPreview() {
