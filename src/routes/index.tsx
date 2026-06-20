@@ -70,7 +70,6 @@ function HomePage() {
       <SiteHeader />
       <main>
         <Hero />
-        <Calculator />
         <IndustriesPreview />
         <ServicesPreview />
         <WhyUs />
