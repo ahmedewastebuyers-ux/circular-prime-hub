@@ -4,7 +4,6 @@ import {
   Truck,
   Recycle,
   FileCheck2,
-  Lock,
   Building2,
   Server,
   Cpu,
