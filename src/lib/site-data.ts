@@ -31,69 +31,67 @@ import {
   Globe2,
 } from "lucide-react";
 
-// Enterprise stock photography (Unsplash CDN, auto WebP, descriptive alt text).
+// Enterprise stock photography (Unsplash CDN, auto WebP).
+// All imagery depicts retired, decommissioned, or scrap electronic assets —
+// NOT active workplaces, people, or operating equipment.
 const U = (id: string, w = 1200) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=70`;
 
 export const siteImages = {
   hero: {
-    src: U("1558494949-ef010cbdcc31", 1920),
-    alt: "Corporate data center server rack asset recovery and e-waste disposal",
-  },
-  calculator: {
-    src: U("1591405351990-4726e331f141", 1200),
-    alt: "Enterprise IT assets including laptops servers and networking equipment",
+    src: U("1518770660439-4636190af475", 1920),
+    alt: "Retired enterprise circuit boards and decommissioned IT hardware ready for asset recovery",
   },
   about: {
-    src: U("1553413077-190dd305871c", 1600),
-    alt: "Enterprise warehouse operations for IT asset sorting and electronics processing",
+    src: U("1591405351990-4726e331f141", 1600),
+    alt: "Warehouse of retired corporate laptops and IT assets awaiting buyback and recovery",
   },
   contact: {
-    src: U("1586528116311-ad8dd3c8310d", 1600),
-    alt: "Professional logistics fleet for enterprise IT asset collection",
+    src: U("1607799279861-4dd421887fb3", 1600),
+    alt: "Logistics truck loading bulk retired electronics for nationwide e-waste collection",
   },
 } as const;
 
 export const industries = [
   { icon: Cpu, name: "IT Companies", desc: "Refresh cycle recovery for workstations, laptops, peripherals.", ex: "Laptops · Workstations · Monitors",
-    image: U("1497366216548-37526070297c"), alt: "Corporate IT infrastructure and enterprise technology assets" },
+    image: U("1591405351990-4726e331f141"), alt: "Stacked retired corporate laptops and office IT equipment ready for asset recovery" },
   { icon: Server, name: "Data Centers", desc: "End-to-end rack decommissioning with audit-grade chain of custody.", ex: "Servers · Storage · Networking",
-    image: U("1544197150-b99a580bb7a8"), alt: "Data center server racks ready for decommissioning" },
+    image: U("1558494949-ef010cbdcc31"), alt: "Decommissioned data center server racks and networking equipment removed for recovery" },
   { icon: Factory, name: "Manufacturing", desc: "Industrial electronics, control panels, automation hardware.", ex: "PCBs · PLCs · Drives",
-    image: U("1581092335397-9583eb92d232"), alt: "Industrial electronics and manufacturing automation systems" },
+    image: U("1581092335397-9583eb92d232"), alt: "Obsolete industrial control boards and retired automation electronics for disposal" },
   { icon: Stethoscope, name: "Hospitals", desc: "Compliant disposal of medical electronics and IT assets.", ex: "Diagnostics · Workstations",
-    image: U("1576091160399-112ba8d25d1d"), alt: "Healthcare technology and medical IT equipment" },
+    image: U("1517336714731-489689fd1ca8"), alt: "Retired medical monitor circuit boards and decommissioned hospital electronics for recovery" },
   { icon: GraduationCap, name: "Educational Institutions", desc: "Bulk disposal for labs, libraries and admin infrastructure.", ex: "Desktops · Projectors · Lab kits",
-    image: U("1503676260728-1c00da094a0b"), alt: "Educational institution computer lab and technology assets" },
+    image: U("1496181133206-80ce9b88a853"), alt: "Educational institution computer lab desktops and retired technology assets awaiting disposal" },
   { icon: Building, name: "Government Organizations", desc: "Tender-based disposal with full statutory compliance.", ex: "Office IT · Servers",
-    image: U("1496449903678-68ddcb189a24"), alt: "Government office IT infrastructure and technology systems" },
+    image: U("1591488320449-011701bb6704"), alt: "Government surplus electronic scrap and retired IT assets staged for tender disposal" },
   { icon: Landmark, name: "Banks & BFSI", desc: "Certified data destruction with regulatory documentation.", ex: "ATMs · Servers · Drives",
-    image: U("1554224155-6726b3ff858f"), alt: "Banking IT infrastructure and BFSI enterprise systems" },
+    image: U("1581093588401-fbb62a02f120"), alt: "Retired bank hard drives and BFSI storage media prepared for secure destruction" },
   { icon: Radio, name: "Telecom", desc: "Network infrastructure recovery and component buyback.", ex: "BTS · Routers · Switches",
-    image: U("1551703599-6b3e8379aa8d"), alt: "Telecom networking equipment and infrastructure cabling" },
+    image: U("1544197150-b99a580bb7a8"), alt: "Retired telecom networking equipment and decommissioned switches for component recovery" },
   { icon: Briefcase, name: "Corporate Offices", desc: "Office relocations, refresh cycles and bulk decommissions.", ex: "Laptops · Furniture-IT",
-    image: U("1517048676732-d65bc937f952"), alt: "Corporate office laptops and workstation refresh assets" },
+    image: U("1591405351990-4726e331f141"), alt: "Bulk retired corporate office laptops staged for refresh-cycle buyback" },
   { icon: CircuitBoard, name: "Electronics OEMs", desc: "Production scrap, returned units, EOL inventory.", ex: "PCB scrap · Components",
-    image: U("1518770660439-4636190af475"), alt: "Electronics OEM PCB assemblies and component inventory" },
+    image: U("1518770660439-4636190af475"), alt: "OEM production PCB scrap and end-of-life electronic component inventory" },
 ];
 
 export const services = [
   { icon: HardDrive, title: "IT Asset Recovery", desc: "Maximize returns from retired enterprise hardware through resale, refurbishment and component recovery.",
-    image: U("1496181133206-80ce9b88a853"), alt: "Enterprise laptops and workstations for IT asset recovery" },
+    image: U("1496181133206-80ce9b88a853"), alt: "Stacked retired enterprise laptops and desktops awaiting IT asset valuation" },
   { icon: Lock, title: "Secure Data Destruction", desc: "On-site or off-site hard drive shredding, degaussing and NIST 800-88 wiping with video proof.",
-    image: U("1581093588401-fbb62a02f120"), alt: "Hard drive shredding and secure data destruction process" },
+    image: U("1581093588401-fbb62a02f120"), alt: "Hard drive disassembly and storage media destruction operation" },
   { icon: Truck, title: "E-Waste Collection", desc: "Nationwide collection with environmentally responsible recycling at CPCB-authorised facilities.",
-    image: U("1607799279861-4dd421887fb3"), alt: "Professional e-waste collection trucks and logistics operations" },
+    image: U("1607799279861-4dd421887fb3"), alt: "Logistics truck loading pallets of bulk electronic scrap for e-waste collection" },
   { icon: Server, title: "Data Center Decommissioning", desc: "Turnkey rack-to-truck retirement with project management, packing and serialised tracking.",
-    image: U("1573164713988-8665fc963095"), alt: "Technicians decommissioning enterprise server racks in a data center" },
+    image: U("1558494949-ef010cbdcc31"), alt: "Server rack dismantling and decommissioned data center infrastructure removal" },
   { icon: Recycle, title: "Reverse Logistics", desc: "GPS-tracked, insured nationwide pickup with tamper-evident packaging and serialised tracking.",
-    image: U("1586528116311-ad8dd3c8310d"), alt: "Enterprise reverse logistics fleet and warehouse operations" },
+    image: U("1607799279861-4dd421887fb3"), alt: "Pallets of retired electronics loaded for reverse logistics pickup" },
   { icon: Building2, title: "Enterprise Buyback", desc: "Direct purchase of retired corporate equipment with transparent fair-market valuation.",
-    image: U("1581094794329-c8112a89af12"), alt: "Technician inspecting enterprise IT equipment for buyback valuation" },
+    image: U("1591405351990-4726e331f141"), alt: "Bulk retired enterprise IT equipment staged for buyback inspection and valuation" },
   { icon: FileCheck2, title: "Compliance Reporting", desc: "Audit-ready Form-6/9, recycling certificates and complete chain-of-custody reporting.",
-    image: U("1450101499163-c8848c66ca85"), alt: "Compliance documentation and audit-ready reporting" },
+    image: U("1450101499163-c8848c66ca85"), alt: "Compliance documentation and audit-ready chain-of-custody reporting" },
   { icon: Leaf, title: "ESG & Sustainability Support", desc: "Carbon offset reports, ESG metrics, and disclosure-ready environmental impact data.",
-    image: U("1473773508845-188df298d2d1"), alt: "ESG and sustainability metrics dashboard for enterprise reporting" },
+    image: U("1473773508845-188df298d2d1"), alt: "ESG and sustainability metrics for enterprise asset recovery reporting" },
 ];
 
 export const assets = [
@@ -126,7 +124,7 @@ export const cases = [
     title: "500+ servers recovered for a hyperscale tenant",
     desc: "Turnkey decommissioning of a 9,000 sq ft co-location footprint across Bengaluru and Mumbai with serialised chain of custody.",
     image: U("1558494949-ef010cbdcc31"),
-    alt: "Hyperscale data center server racks during decommissioning",
+    alt: "Decommissioned hyperscale data center server racks staged for recovery",
     stats: [
       { v: "512", l: "Servers recovered" },
       { v: "₹2.1 Cr", l: "Recovery value" },
@@ -138,7 +136,7 @@ export const cases = [
     title: "Large-scale IT and industrial asset disposal",
     desc: "Tier-1 auto supplier facility refresh — 1,800+ assets including industrial controllers, PCBs and office IT.",
     image: U("1581092335397-9583eb92d232"),
-    alt: "Industrial manufacturing facility with automation equipment",
+    alt: "Obsolete industrial control boards and retired automation electronics sorted for disposal",
     stats: [
       { v: "1,820", l: "Assets processed" },
       { v: "₹84 L", l: "Recovery value" },
@@ -150,7 +148,7 @@ export const cases = [
     title: "Secure recovery of end-of-life IT assets",
     desc: "Pan-India laptop refresh for a BFSI client across 47 branches with on-site shredding and Form-6 documentation.",
     image: U("1496181133206-80ce9b88a853"),
-    alt: "Enterprise laptop refresh and end-of-life IT asset processing",
+    alt: "Pallet of retired enterprise laptops processed for end-of-life IT asset recovery",
     stats: [
       { v: "3,400", l: "Laptops handled" },
       { v: "47", l: "Locations" },
@@ -161,8 +159,8 @@ export const cases = [
     tag: "Telecom Network Sunset",
     title: "Nationwide BTS and RAN equipment recovery",
     desc: "Decommissioning of 240 cell sites across 6 circles — controlled dismantling, secure transport, certified recycling.",
-    image: U("1551703599-6b3e8379aa8d"),
-    alt: "Telecom networking equipment and infrastructure for recovery",
+    image: U("1544197150-b99a580bb7a8"),
+    alt: "Retired telecom switches and networking equipment removed for nationwide recovery",
     stats: [
       { v: "240", l: "Sites cleared" },
       { v: "₹1.4 Cr", l: "Recovery value" },
@@ -173,8 +171,8 @@ export const cases = [
     tag: "Healthcare IT Refresh",
     title: "Hospital chain workstation disposal",
     desc: "Disposal of 2,200 clinical workstations with PHI-grade data destruction and per-drive shred certificates.",
-    image: U("1576091160399-112ba8d25d1d"),
-    alt: "Healthcare IT workstations and medical technology equipment",
+    image: U("1581093588401-fbb62a02f120"),
+    alt: "Retired hospital workstation hard drives staged for PHI-grade data destruction",
     stats: [
       { v: "2,200", l: "Workstations" },
       { v: "100%", l: "Drives shredded" },
@@ -185,8 +183,8 @@ export const cases = [
     tag: "Government Tender Disposal",
     title: "PSU office IT retirement programme",
     desc: "Multi-state tender execution covering 80,000+ kg of mixed office IT with full statutory documentation.",
-    image: U("1496449903678-68ddcb189a24"),
-    alt: "Government office IT systems for tender-based disposal",
+    image: U("1591488320449-011701bb6704"),
+    alt: "Government surplus electronic scrap and retired IT assets staged for tender-based disposal",
     stats: [
       { v: "80T+", l: "Disposed" },
       { v: "9", l: "States" },
