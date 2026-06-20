@@ -1,8 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import {
   ArrowRight,
-  CheckCircle2,
   ChevronDown,
   MessageCircle,
   Calendar,
