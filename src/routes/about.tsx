@@ -35,7 +35,7 @@ function AboutPage() {
         <PageHero
           eyebrow="About us"
           title="Corporate asset recovery, not scrap."
-          subtitle="Built for India's enterprises that demand transparency, security and certified compliance from every disposal."
+          subtitle="Built for India's enterprises that demand transparency, fair valuation and complete documentation on every disposal."
           bgImage={siteImages.about.src}
           bgAlt={siteImages.about.alt}
         />
