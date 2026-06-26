@@ -189,13 +189,13 @@ export const cases = [
   {
     tag: "Government Tender Disposal",
     title: "PSU office IT retirement programme",
-    desc: "Multi-state tender execution covering 80,000+ kg of mixed office IT with full statutory documentation.",
+    desc: "Multi-state tender execution covering 80,000+ kg of mixed office IT with full purchase and handover documentation.",
     image: U("1591488320449-011701bb6704"),
     alt: "Government surplus electronic scrap and retired IT assets staged for tender-based disposal",
     stats: [
       { v: "80T+", l: "Disposed" },
       { v: "9", l: "States" },
-      { v: "100%", l: "Audit-clear" },
+      { v: "100%", l: "On-time delivery" },
     ],
   },
 ];
