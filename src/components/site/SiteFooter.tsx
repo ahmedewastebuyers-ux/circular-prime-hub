@@ -16,7 +16,7 @@ const serviceLinks = [
 const companyLinks: { label: string; to: "/services" | "/industries" | "/compliance" | "/case-studies" | "/about" | "/faq" | "/contact" }[] = [
   { label: "Services", to: "/services" },
   { label: "Industries", to: "/industries" },
-  { label: "Compliance", to: "/compliance" },
+  { label: "Process", to: "/compliance" },
   { label: "Case Studies", to: "/case-studies" },
   { label: "About Us", to: "/about" },
   { label: "FAQ", to: "/faq" },
