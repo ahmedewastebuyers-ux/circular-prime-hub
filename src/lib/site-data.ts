@@ -211,14 +211,13 @@ export const faqs = [
   { q: "How quickly can collections be scheduled?", a: "Standard collections are scheduled within 48–72 hours of accepted quotation. Emergency and same-week pickups are available for enterprise clients." },
 ];
 
-export const certs = [
-  { code: "CPCB", label: "Authorised Recycler" },
-  { code: "ISO 14001", label: "Environment Mgmt" },
-  { code: "ISO 9001", label: "Quality Mgmt" },
-  { code: "ISO 27001", label: "Information Security" },
-  { code: "OHSAS 18001", label: "Occupational H&S" },
-  { code: "R2v3", label: "Responsible Recycling" },
-  { code: "E-Waste Rules 2022", label: "MoEF&CC Compliant" },
+export const processSteps = [
+  { code: "01", label: "Inquiry & Asset List" },
+  { code: "02", label: "Valuation & Quote" },
+  { code: "03", label: "Pickup Scheduling" },
+  { code: "04", label: "On-Site Collection" },
+  { code: "05", label: "Handover Documentation" },
+  { code: "06", label: "GST Invoice & Payment" },
 ];
 
 export const PHONE = "+91 98801 12263";
