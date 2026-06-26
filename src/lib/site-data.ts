@@ -177,7 +177,7 @@ export const cases = [
   {
     tag: "Healthcare IT Refresh",
     title: "Hospital chain workstation buyback",
-    desc: "Buyback of 2,200 clinical workstations across 12 hospitals with serialised asset tracking and Form-9 reporting.",
+    desc: "Buyback of 2,200 clinical workstations across 12 hospitals with serialised asset tracking and complete handover documentation.",
     image: U("1496181133206-80ce9b88a853"),
     alt: "Retired clinical workstations staged for hospital IT asset buyback",
     stats: [
