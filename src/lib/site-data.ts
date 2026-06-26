@@ -147,7 +147,7 @@ export const cases = [
     stats: [
       { v: "1,820", l: "Assets processed" },
       { v: "₹84 L", l: "Recovery value" },
-      { v: "0", l: "Compliance findings" },
+      { v: "100%", l: "On-time pickup" },
     ],
   },
   {
