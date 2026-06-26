@@ -5,15 +5,15 @@ import { SiteFooter } from "@/components/site/SiteFooter";
 import { StickyActions } from "@/components/site/StickyActions";
 import { PageHero, PageShell } from "@/components/site/PageHero";
 import { QuoteForm, InspectionForm } from "@/components/site/QuoteForm";
-import { PHONE, PHONE_TEL, EMAIL, WHATSAPP, siteImages } from "@/lib/site-data";
+import { BUSINESS_ADDRESS, PHONE, PHONE_TEL, EMAIL, WHATSAPP, siteImages } from "@/lib/site-data";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact Us — E-Waste Buyers" },
-      { name: "description", content: "Request a corporate buyback quote, schedule a site inspection, or reach our enterprise desk for IT equipment buyback and corporate e-waste collection." },
+      { name: "description", content: `Request a corporate buyback quote, schedule a site inspection, or visit our office at ${BUSINESS_ADDRESS}.` },
       { property: "og:title", content: "Contact — E-Waste Buyers" },
-      { property: "og:description", content: "Speak to our enterprise desk. Response within one business day." },
+      { property: "og:description", content: `Speak to our enterprise desk at ${BUSINESS_ADDRESS}. Response within one business day.` },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
   }),
@@ -63,13 +63,13 @@ function ContactPage() {
                 </h2>
                 <p className="mt-5 flex items-start gap-3 text-sm text-muted-foreground">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-forest" />
-                  Plot 42, Industrial Area Phase II, Gurugram, Haryana 122016
+                  {BUSINESS_ADDRESS}
                 </p>
               </div>
               <div className="overflow-hidden rounded-2xl border border-border bg-card">
                 <iframe
                   title="E-Waste Buyers office location"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=77.0%2C28.45%2C77.12%2C28.52&layer=mapnik&marker=28.4595%2C77.0266"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=77.5400%2C12.9450%2C77.5900%2C12.9850&layer=mapnik&marker=12.9650%2C77.5650"
                   className="h-80 w-full"
                   loading="lazy"
                 />

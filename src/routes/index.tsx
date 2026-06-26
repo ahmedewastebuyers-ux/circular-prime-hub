@@ -10,7 +10,7 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { StickyActions } from "@/components/site/StickyActions";
 import { Section } from "@/components/site/Section";
-import { industries, services, why, cases, faqs, siteImages, PHONE_TEL, WHATSAPP } from "@/lib/site-data";
+import { industries, services, why, cases, faqs, siteImages, PHONE_TEL, WHATSAPP, BUSINESS_STREET_ADDRESS, BUSINESS_LOCALITY, BUSINESS_REGION, BUSINESS_POSTAL_CODE, BUSINESS_COUNTRY } from "@/lib/site-data";
 
 
 export const Route = createFileRoute("/")({
@@ -44,11 +44,20 @@ export const Route = createFileRoute("/")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Organization",
+          "@type": "LocalBusiness",
           name: "E-Waste Buyers",
           url: "https://ewastebuyers.com",
           description:
             "Corporate e-waste disposal and IT asset recovery company in India.",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: BUSINESS_STREET_ADDRESS,
+            addressLocality: BUSINESS_LOCALITY,
+            addressRegion: BUSINESS_REGION,
+            postalCode: BUSINESS_POSTAL_CODE,
+            addressCountry: BUSINESS_COUNTRY,
+          },
+          areaServed: "IN",
           contactPoint: {
             "@type": "ContactPoint",
             telephone: "+91-98801-12263",
