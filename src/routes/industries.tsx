@@ -10,9 +10,9 @@ export const Route = createFileRoute("/industries")({
   head: () => ({
     meta: [
       { title: "Industries We Serve — E-Waste Buyers" },
-      { name: "description", content: "Industry-specific IT asset recovery and e-waste disposal solutions for IT, data centers, manufacturing, BFSI, healthcare, telecom, government, education and OEMs." },
+      { name: "description", content: "Industry-specific IT equipment buyback and corporate e-waste collection for IT, data centers, manufacturing, BFSI, healthcare, telecom, government, education and OEMs." },
       { property: "og:title", content: "Industries — E-Waste Buyers" },
-      { property: "og:description", content: "Built for regulated enterprise environments across India." },
+      { property: "og:description", content: "Bulk corporate e-waste collection and IT asset recovery across enterprise sectors." },
     ],
     links: [{ rel: "canonical", href: "/industries" }],
   }),
