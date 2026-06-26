@@ -58,12 +58,12 @@ function AboutPage() {
                 E-Waste Buyers was founded to professionalise corporate e-waste in India.
                 For too long, enterprises have handed retired technology to informal scrap
                 channels — losing recoverable value, creating data-security risk and
-                generating zero compliance documentation.
+                ending up with no usable purchase documentation.
               </p>
               <p>
                 We built the opposite: a B2B-first operation with serial-level asset
                 grading, bulk buyback of servers, networking and laptops, insured
-                pan-India logistics and audit-grade reporting. Today we serve
+                pan-India logistics and complete handover documentation. Today we serve
                 enterprises across IT, BFSI, healthcare, manufacturing, telecom
                 and government — from single-site refreshes to multi-state data
                 center sunsets.
