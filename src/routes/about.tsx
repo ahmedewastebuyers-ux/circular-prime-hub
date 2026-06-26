@@ -21,10 +21,10 @@ export const Route = createFileRoute("/about")({
 });
 
 const pillars = [
-  { icon: Target, title: "Mission", desc: "Recover maximum value from retired enterprise technology while guaranteeing compliance, security and chain of custody." },
-  { icon: Compass, title: "Vision", desc: "Be India's most trusted corporate asset recovery partner — built for audit-grade B2B engagements, not scrap." },
-  { icon: Users, title: "Leadership", desc: "Founded by industry veterans with 15+ years across enterprise IT, logistics and environmental compliance." },
-  { icon: Building2, title: "Operations", desc: "Pan-India footprint across 28 states, authorised facilities, GPS-tracked logistics and dedicated enterprise account managers." },
+  { icon: Target, title: "Mission", desc: "Recover maximum value from retired enterprise technology with transparent pricing and complete handover documentation." },
+  { icon: Compass, title: "Vision", desc: "Be India's most trusted corporate asset recovery partner — built for B2B engagements, not informal scrap." },
+  { icon: Users, title: "Leadership", desc: "Founded by industry veterans with 15+ years across enterprise IT, logistics and asset recovery." },
+  { icon: Building2, title: "Operations", desc: "Pan-India footprint across major industrial corridors, insured logistics and dedicated enterprise account managers." },
 ];
 
 function AboutPage() {
