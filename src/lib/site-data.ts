@@ -153,7 +153,7 @@ export const cases = [
   {
     tag: "Corporate Office Refresh",
     title: "Bulk laptop buyback across 47 BFSI branches",
-    desc: "Pan-India laptop refresh for a BFSI client across 47 branches with serialised asset tracking and Form-6 documentation.",
+    desc: "Pan-India laptop refresh for a BFSI client across 47 branches with serialised asset tracking and full handover documentation.",
     image: U("1496181133206-80ce9b88a853"),
     alt: "Pallet of retired enterprise laptops processed for end-of-life IT asset recovery",
     stats: [
