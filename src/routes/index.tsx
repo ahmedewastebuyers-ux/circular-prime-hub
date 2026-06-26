@@ -105,7 +105,7 @@ function Hero() {
         <div className="max-w-3xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-semibold tracking-[0.18em] uppercase text-white/80 backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-forest" />
-            CPCB Authorised · ISO 14001 · ISO 27001
+            Bulk IT Asset Recovery & E-Waste Procurement
           </span>
 
           <h1 className="font-display mt-8 text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
