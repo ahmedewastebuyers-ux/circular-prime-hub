@@ -255,7 +255,7 @@ function WhyUs() {
   return (
     <Section
       eyebrow="Why choose us"
-      title="The operational standards procurement and compliance teams expect."
+      title="The operational standards enterprise procurement teams expect."
     >
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {why.map((w) => (
