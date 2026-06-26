@@ -165,7 +165,7 @@ export const cases = [
   {
     tag: "Telecom Network Sunset",
     title: "Nationwide BTS and RAN equipment recovery",
-    desc: "Decommissioning of 240 cell sites across 6 circles — controlled dismantling, secure transport, certified recycling.",
+    desc: "Decommissioning of 240 cell sites across 6 circles — controlled dismantling, secure transport and material recovery.",
     image: U("1544197150-b99a580bb7a8"),
     alt: "Retired telecom switches and networking equipment removed for nationwide recovery",
     stats: [
