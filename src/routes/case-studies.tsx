@@ -10,9 +10,9 @@ export const Route = createFileRoute("/case-studies")({
   head: () => ({
     meta: [
       { title: "Case Studies — E-Waste Buyers" },
-      { name: "description", content: "Enterprise e-waste and IT asset recovery case studies across data centers, manufacturing, BFSI, telecom, healthcare and government." },
+      { name: "description", content: "Enterprise IT equipment buyback and e-waste collection case studies across data centers, manufacturing, BFSI, telecom, healthcare and government." },
       { property: "og:title", content: "Case Studies — E-Waste Buyers" },
-      { property: "og:description", content: "Real enterprise engagements with measurable recovery and compliance outcomes." },
+      { property: "og:description", content: "Real enterprise engagements with measurable recovery value and on-time delivery." },
     ],
     links: [{ rel: "canonical", href: "/case-studies" }],
   }),
