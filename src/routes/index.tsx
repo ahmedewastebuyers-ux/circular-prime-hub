@@ -16,11 +16,11 @@ import { industries, services, why, cases, faqs, siteImages, PHONE_TEL, WHATSAPP
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "E-Waste Buyers — IT Asset Recovery & Corporate E-Waste Procurement in India" },
+      { title: "E-Waste Buyers — Bulk IT Asset Recovery & Corporate E-Waste Procurement in India" },
       {
         name: "description",
         content:
-          "We buy retired IT assets, servers, networking equipment, laptops, industrial electronics and corporate e-waste in bulk. Pan-India IT asset recovery and CPCB-compliant procurement.",
+          "We buy retired IT assets, servers, networking equipment, laptops, industrial electronics and corporate e-waste in bulk. Pan-India IT equipment buyback and electronics procurement.",
       },
       { property: "og:title", content: "E-Waste Buyers — Corporate IT Asset Recovery & Procurement" },
       {
