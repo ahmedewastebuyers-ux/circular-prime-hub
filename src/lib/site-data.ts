@@ -206,7 +206,7 @@ export const faqs = [
   { q: "How is asset valuation determined?", a: "Valuation is based on serial-level inspection, market resale value, working condition, age, and recoverable material content. Every line item is disclosed transparently in the proposal." },
   { q: "Do you handle bulk laptop and server procurement?", a: "Yes — bulk laptop buyback and server recovery are core services. We purchase rack, tower and blade servers along with storage, networking and end-user computing in lots of any size." },
   { q: "Can you handle data center decommissioning?", a: "Yes. Our turnkey decommissioning service covers project planning, racks-to-truck removal, packing, serialised tracking, transportation, processing and final reporting." },
-  { q: "Do you provide compliance documentation?", a: "Every engagement includes Form-6/Form-9 trail, recycling certificates and ESG-grade environmental reports — all audit-ready." },
+  { q: "What documentation do you provide?", a: "Every engagement includes a GST invoice, serialised asset collection record, material handover sheet and pickup acknowledgement — everything procurement and finance teams need." },
   { q: "What industries do you serve?", a: "Enterprises across IT, data centers, manufacturing, BFSI, healthcare, telecom, education, government, electronics OEMs and corporate offices of every scale." },
   { q: "How quickly can collections be scheduled?", a: "Standard collections are scheduled within 48–72 hours of accepted quotation. Emergency and same-week pickups are available for enterprise clients." },
 ];
