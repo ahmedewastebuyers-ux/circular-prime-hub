@@ -11,7 +11,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact Us — E-Waste Buyers" },
-      { name: "description", content: "Request a corporate quote, schedule a site inspection, or reach our enterprise desk for IT asset recovery and e-waste disposal." },
+      { name: "description", content: "Request a corporate buyback quote, schedule a site inspection, or reach our enterprise desk for IT equipment buyback and corporate e-waste collection." },
       { property: "og:title", content: "Contact — E-Waste Buyers" },
       { property: "og:description", content: "Speak to our enterprise desk. Response within one business day." },
     ],
