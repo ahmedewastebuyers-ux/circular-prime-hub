@@ -11,9 +11,9 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Us — E-Waste Buyers" },
-      { name: "description", content: "India's trusted corporate asset recovery and e-waste management partner. Our story, mission, leadership and operations." },
+      { name: "description", content: "India's B2B partner for corporate IT asset recovery and e-waste buyback. Our story, mission, leadership and operations." },
       { property: "og:title", content: "About — E-Waste Buyers" },
-      { property: "og:description", content: "A premium B2B partner for IT asset recovery and certified e-waste disposal." },
+      { property: "og:description", content: "A B2B partner for IT asset recovery and corporate e-waste buyback." },
     ],
     links: [{ rel: "canonical", href: "/about" }],
   }),
