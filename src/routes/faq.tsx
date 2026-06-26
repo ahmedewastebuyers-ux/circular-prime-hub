@@ -27,7 +27,7 @@ function FAQPage() {
       <main>
         <PageHero
           eyebrow="Frequently asked"
-          title="Answers for procurement, IT and compliance teams."
+          title="Answers for procurement and IT teams."
         />
         <section className="section-y">
           <div className="container-px mx-auto max-w-3xl">
