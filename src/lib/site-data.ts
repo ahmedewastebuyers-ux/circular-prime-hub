@@ -54,17 +54,17 @@ export const siteImages = {
 export const industries = [
   { icon: Cpu, name: "IT Companies", desc: "Refresh cycle recovery for workstations, laptops, peripherals.", ex: "Laptops · Workstations · Monitors",
     image: U("1591405351990-4726e331f141"), alt: "Stacked retired corporate laptops and office IT equipment ready for asset recovery" },
-  { icon: Server, name: "Data Centers", desc: "End-to-end rack decommissioning with audit-grade chain of custody.", ex: "Servers · Storage · Networking",
+  { icon: Server, name: "Data Centers", desc: "End-to-end rack decommissioning with serialised chain of custody.", ex: "Servers · Storage · Networking",
     image: U("1558494949-ef010cbdcc31"), alt: "Decommissioned data center server racks and networking equipment removed for recovery" },
   { icon: Factory, name: "Manufacturing", desc: "Industrial electronics, control panels, automation hardware.", ex: "PCBs · PLCs · Drives",
     image: U("1581092335397-9583eb92d232"), alt: "Obsolete industrial control boards and retired automation electronics for disposal" },
-  { icon: Stethoscope, name: "Hospitals", desc: "Compliant disposal of medical electronics and IT assets.", ex: "Diagnostics · Workstations",
+  { icon: Stethoscope, name: "Hospitals", desc: "Bulk pickup of retired medical electronics and hospital IT assets.", ex: "Diagnostics · Workstations",
     image: U("1517336714731-489689fd1ca8"), alt: "Retired medical monitor circuit boards and decommissioned hospital electronics for recovery" },
   { icon: GraduationCap, name: "Educational Institutions", desc: "Bulk disposal for labs, libraries and admin infrastructure.", ex: "Desktops · Projectors · Lab kits",
     image: U("1496181133206-80ce9b88a853"), alt: "Educational institution computer lab desktops and retired technology assets awaiting disposal" },
-  { icon: Building, name: "Government Organizations", desc: "Tender-based disposal with full statutory compliance.", ex: "Office IT · Servers",
+  { icon: Building, name: "Government Organizations", desc: "Tender-based disposal of surplus IT assets and electronics.", ex: "Office IT · Servers",
     image: U("1591488320449-011701bb6704"), alt: "Government surplus electronic scrap and retired IT assets staged for tender disposal" },
-  { icon: Landmark, name: "Banks & BFSI", desc: "Certified asset recovery with regulatory documentation.", ex: "ATMs · Servers · Drives",
+  { icon: Landmark, name: "Banks & BFSI", desc: "Asset recovery for branch IT, ATMs and back-office hardware.", ex: "ATMs · Servers · Drives",
     image: U("1581093588401-fbb62a02f120"), alt: "Retired bank IT hardware and BFSI storage assets staged for recovery" },
   { icon: Radio, name: "Telecom", desc: "Network infrastructure recovery and component buyback.", ex: "BTS · Routers · Switches",
     image: U("1544197150-b99a580bb7a8"), alt: "Retired telecom networking equipment and decommissioned switches for component recovery" },
@@ -77,7 +77,7 @@ export const industries = [
 export const services = [
   { icon: HardDrive, title: "IT Asset Recovery", desc: "Maximise returns from retired enterprise hardware through resale, refurbishment and component recovery.",
     image: U("1496181133206-80ce9b88a853"), alt: "Stacked retired enterprise laptops and desktops awaiting IT asset valuation" },
-  { icon: Truck, title: "E-Waste Collection & Procurement", desc: "Nationwide pickup and direct purchase of bulk corporate e-waste at CPCB-authorised facilities.",
+  { icon: Truck, title: "E-Waste Collection & Procurement", desc: "Nationwide pickup and direct purchase of bulk corporate e-waste from enterprise sites.",
     image: U("1607799279861-4dd421887fb3"), alt: "Logistics truck loading pallets of bulk electronic scrap for e-waste procurement" },
   { icon: Server, title: "Data Center Decommissioning", desc: "Turnkey rack-to-truck retirement with project management, packing and serialised tracking.",
     image: U("1558494949-ef010cbdcc31"), alt: "Server rack dismantling and decommissioned data center infrastructure removal" },
@@ -95,10 +95,10 @@ export const services = [
     image: U("1591405351990-4726e331f141"), alt: "Bulk retired enterprise IT equipment staged for buyback inspection" },
   { icon: Recycle, title: "Reverse Logistics", desc: "GPS-tracked, insured nationwide pickup with tamper-evident packaging and serialised tracking.",
     image: U("1607799279861-4dd421887fb3"), alt: "Pallets of retired electronics loaded for reverse logistics pickup" },
-  { icon: FileCheck2, title: "Compliance Reporting", desc: "Audit-ready Form-6/9, recycling certificates and complete chain-of-custody reporting.",
-    image: U("1450101499163-c8848c66ca85"), alt: "Compliance documentation and audit-ready chain-of-custody reporting" },
-  { icon: Leaf, title: "ESG & Sustainability Support", desc: "Carbon offset reports, ESG metrics, and disclosure-ready environmental impact data.",
-    image: U("1473773508845-188df298d2d1"), alt: "ESG and sustainability metrics for enterprise asset recovery reporting" },
+  { icon: FileCheck2, title: "Purchase Documentation", desc: "GST invoices, asset collection records, serialised handover sheets and material movement documentation for every pickup.",
+    image: U("1450101499163-c8848c66ca85"), alt: "Purchase documentation and asset handover paperwork for corporate e-waste pickup" },
+  { icon: Leaf, title: "Corporate Procurement Support", desc: "Vendor onboarding, PO-based engagements and recurring buyback programmes for enterprise procurement teams.",
+    image: U("1473773508845-188df298d2d1"), alt: "Corporate procurement support for enterprise asset recovery programmes" },
 ];
 
 export const assets = [
@@ -117,12 +117,12 @@ export const assets = [
 ];
 
 export const why = [
-  { icon: Globe2, title: "Pan India Collection", desc: "Operations across 28 states." },
-  { icon: Truck, title: "Secure Logistics", desc: "GPS-tracked, insured, tamper-evident." },
-  { icon: Gauge, title: "Transparent Valuation", desc: "Line-item pricing, no hidden deductions." },
-  { icon: FileCheck2, title: "Compliance Documentation", desc: "Audit-ready paperwork, every time." },
-  { icon: Users, title: "Dedicated Account Managers", desc: "Named POC for every enterprise." },
-  { icon: ShieldCheck, title: "Certified Recycling Partners", desc: "CPCB authorised facilities only." },
+  { icon: Gauge, title: "Fast Asset Evaluation", desc: "Site-level or remote valuation turned around within 24–48 hours of inquiry." },
+  { icon: Truck, title: "Bulk Corporate Pickups", desc: "Insured, GPS-tracked logistics for single-site and multi-site decommissions." },
+  { icon: ShieldCheck, title: "Transparent Pricing", desc: "Line-item valuation per asset — no hidden deductions or post-pickup repricing." },
+  { icon: HardDrive, title: "Enterprise Asset Recovery", desc: "Buyback of servers, laptops, networking, industrial electronics and PCB scrap." },
+  { icon: Globe2, title: "Pan India Service Network", desc: "Operational footprint across major industrial corridors and metros." },
+  { icon: Users, title: "Dedicated Support", desc: "A named point of contact from inquiry to final handover and documentation." },
 ];
 
 export const cases = [
@@ -147,13 +147,13 @@ export const cases = [
     stats: [
       { v: "1,820", l: "Assets processed" },
       { v: "₹84 L", l: "Recovery value" },
-      { v: "0", l: "Compliance findings" },
+      { v: "100%", l: "On-time pickup" },
     ],
   },
   {
     tag: "Corporate Office Refresh",
     title: "Bulk laptop buyback across 47 BFSI branches",
-    desc: "Pan-India laptop refresh for a BFSI client across 47 branches with serialised asset tracking and Form-6 documentation.",
+    desc: "Pan-India laptop refresh for a BFSI client across 47 branches with serialised asset tracking and full handover documentation.",
     image: U("1496181133206-80ce9b88a853"),
     alt: "Pallet of retired enterprise laptops processed for end-of-life IT asset recovery",
     stats: [
@@ -165,7 +165,7 @@ export const cases = [
   {
     tag: "Telecom Network Sunset",
     title: "Nationwide BTS and RAN equipment recovery",
-    desc: "Decommissioning of 240 cell sites across 6 circles — controlled dismantling, secure transport, certified recycling.",
+    desc: "Decommissioning of 240 cell sites across 6 circles — controlled dismantling, secure transport and material recovery.",
     image: U("1544197150-b99a580bb7a8"),
     alt: "Retired telecom switches and networking equipment removed for nationwide recovery",
     stats: [
@@ -177,7 +177,7 @@ export const cases = [
   {
     tag: "Healthcare IT Refresh",
     title: "Hospital chain workstation buyback",
-    desc: "Buyback of 2,200 clinical workstations across 12 hospitals with serialised asset tracking and Form-9 reporting.",
+    desc: "Buyback of 2,200 clinical workstations across 12 hospitals with serialised asset tracking and complete handover documentation.",
     image: U("1496181133206-80ce9b88a853"),
     alt: "Retired clinical workstations staged for hospital IT asset buyback",
     stats: [
@@ -189,13 +189,13 @@ export const cases = [
   {
     tag: "Government Tender Disposal",
     title: "PSU office IT retirement programme",
-    desc: "Multi-state tender execution covering 80,000+ kg of mixed office IT with full statutory documentation.",
+    desc: "Multi-state tender execution covering 80,000+ kg of mixed office IT with full purchase and handover documentation.",
     image: U("1591488320449-011701bb6704"),
     alt: "Government surplus electronic scrap and retired IT assets staged for tender-based disposal",
     stats: [
       { v: "80T+", l: "Disposed" },
       { v: "9", l: "States" },
-      { v: "100%", l: "Audit-clear" },
+      { v: "100%", l: "On-time delivery" },
     ],
   },
 ];
@@ -206,19 +206,18 @@ export const faqs = [
   { q: "How is asset valuation determined?", a: "Valuation is based on serial-level inspection, market resale value, working condition, age, and recoverable material content. Every line item is disclosed transparently in the proposal." },
   { q: "Do you handle bulk laptop and server procurement?", a: "Yes — bulk laptop buyback and server recovery are core services. We purchase rack, tower and blade servers along with storage, networking and end-user computing in lots of any size." },
   { q: "Can you handle data center decommissioning?", a: "Yes. Our turnkey decommissioning service covers project planning, racks-to-truck removal, packing, serialised tracking, transportation, processing and final reporting." },
-  { q: "Do you provide compliance documentation?", a: "Every engagement includes Form-6/Form-9 trail, recycling certificates and ESG-grade environmental reports — all audit-ready." },
+  { q: "What documentation do you provide?", a: "Every engagement includes a GST invoice, serialised asset collection record, material handover sheet and pickup acknowledgement — everything procurement and finance teams need." },
   { q: "What industries do you serve?", a: "Enterprises across IT, data centers, manufacturing, BFSI, healthcare, telecom, education, government, electronics OEMs and corporate offices of every scale." },
   { q: "How quickly can collections be scheduled?", a: "Standard collections are scheduled within 48–72 hours of accepted quotation. Emergency and same-week pickups are available for enterprise clients." },
 ];
 
-export const certs = [
-  { code: "CPCB", label: "Authorised Recycler" },
-  { code: "ISO 14001", label: "Environment Mgmt" },
-  { code: "ISO 9001", label: "Quality Mgmt" },
-  { code: "ISO 27001", label: "Information Security" },
-  { code: "OHSAS 18001", label: "Occupational H&S" },
-  { code: "R2v3", label: "Responsible Recycling" },
-  { code: "E-Waste Rules 2022", label: "MoEF&CC Compliant" },
+export const processSteps = [
+  { code: "01", label: "Inquiry & Asset List" },
+  { code: "02", label: "Valuation & Quote" },
+  { code: "03", label: "Pickup Scheduling" },
+  { code: "04", label: "On-Site Collection" },
+  { code: "05", label: "Handover Documentation" },
+  { code: "06", label: "GST Invoice & Payment" },
 ];
 
 export const PHONE = "+91 98801 12263";

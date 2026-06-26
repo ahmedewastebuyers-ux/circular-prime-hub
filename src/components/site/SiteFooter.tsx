@@ -16,7 +16,7 @@ const serviceLinks = [
 const companyLinks: { label: string; to: "/services" | "/industries" | "/compliance" | "/case-studies" | "/about" | "/faq" | "/contact" }[] = [
   { label: "Services", to: "/services" },
   { label: "Industries", to: "/industries" },
-  { label: "Compliance", to: "/compliance" },
+  { label: "Process", to: "/compliance" },
   { label: "Case Studies", to: "/case-studies" },
   { label: "About Us", to: "/about" },
   { label: "FAQ", to: "/faq" },
@@ -105,7 +105,7 @@ export function SiteFooter() {
           <div className="flex gap-6">
             <a href="#" className="hover:text-white">Privacy Policy</a>
             <a href="#" className="hover:text-white">Terms of Service</a>
-            <Link to="/compliance" className="hover:text-white">Compliance</Link>
+            <Link to="/compliance" className="hover:text-white">Process</Link>
           </div>
         </div>
       </div>

@@ -10,9 +10,9 @@ export const Route = createFileRoute("/case-studies")({
   head: () => ({
     meta: [
       { title: "Case Studies — E-Waste Buyers" },
-      { name: "description", content: "Enterprise e-waste and IT asset recovery case studies across data centers, manufacturing, BFSI, telecom, healthcare and government." },
+      { name: "description", content: "Enterprise IT equipment buyback and e-waste collection case studies across data centers, manufacturing, BFSI, telecom, healthcare and government." },
       { property: "og:title", content: "Case Studies — E-Waste Buyers" },
-      { property: "og:description", content: "Real enterprise engagements with measurable recovery and compliance outcomes." },
+      { property: "og:description", content: "Real enterprise engagements with measurable recovery value and on-time delivery." },
     ],
     links: [{ rel: "canonical", href: "/case-studies" }],
   }),
@@ -27,7 +27,7 @@ function CaseStudiesPage() {
         <PageHero
           eyebrow="Case studies"
           title="Enterprises that trust our process."
-          subtitle="Real engagements. Real numbers. Audit-clear outcomes."
+          subtitle="Real engagements. Real numbers. On-time delivery."
           bgImage="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1920&q=70"
           bgAlt="Enterprise data center server racks"
         />

@@ -11,9 +11,9 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Us — E-Waste Buyers" },
-      { name: "description", content: "India's trusted corporate asset recovery and e-waste management partner. Our story, mission, leadership and operations." },
+      { name: "description", content: "India's B2B partner for corporate IT asset recovery and e-waste buyback. Our story, mission, leadership and operations." },
       { property: "og:title", content: "About — E-Waste Buyers" },
-      { property: "og:description", content: "A premium B2B partner for IT asset recovery and certified e-waste disposal." },
+      { property: "og:description", content: "A B2B partner for IT asset recovery and corporate e-waste buyback." },
     ],
     links: [{ rel: "canonical", href: "/about" }],
   }),
@@ -21,10 +21,10 @@ export const Route = createFileRoute("/about")({
 });
 
 const pillars = [
-  { icon: Target, title: "Mission", desc: "Recover maximum value from retired enterprise technology while guaranteeing compliance, security and chain of custody." },
-  { icon: Compass, title: "Vision", desc: "Be India's most trusted corporate asset recovery partner — built for audit-grade B2B engagements, not scrap." },
-  { icon: Users, title: "Leadership", desc: "Founded by industry veterans with 15+ years across enterprise IT, logistics and environmental compliance." },
-  { icon: Building2, title: "Operations", desc: "Pan-India footprint across 28 states, authorised facilities, GPS-tracked logistics and dedicated enterprise account managers." },
+  { icon: Target, title: "Mission", desc: "Recover maximum value from retired enterprise technology with transparent pricing and complete handover documentation." },
+  { icon: Compass, title: "Vision", desc: "Be India's most trusted corporate asset recovery partner — built for B2B engagements, not informal scrap." },
+  { icon: Users, title: "Leadership", desc: "Founded by industry veterans with 15+ years across enterprise IT, logistics and asset recovery." },
+  { icon: Building2, title: "Operations", desc: "Pan-India footprint across major industrial corridors, insured logistics and dedicated enterprise account managers." },
 ];
 
 function AboutPage() {
@@ -35,7 +35,7 @@ function AboutPage() {
         <PageHero
           eyebrow="About us"
           title="Corporate asset recovery, not scrap."
-          subtitle="Built for India's enterprises that demand transparency, security and certified compliance from every disposal."
+          subtitle="Built for India's enterprises that demand transparency, fair valuation and complete documentation on every disposal."
           bgImage={siteImages.about.src}
           bgAlt={siteImages.about.alt}
         />
@@ -58,12 +58,12 @@ function AboutPage() {
                 E-Waste Buyers was founded to professionalise corporate e-waste in India.
                 For too long, enterprises have handed retired technology to informal scrap
                 channels — losing recoverable value, creating data-security risk and
-                generating zero compliance documentation.
+                ending up with no usable purchase documentation.
               </p>
               <p>
                 We built the opposite: a B2B-first operation with serial-level asset
                 grading, bulk buyback of servers, networking and laptops, insured
-                pan-India logistics and audit-grade reporting. Today we serve
+                pan-India logistics and complete handover documentation. Today we serve
                 enterprises across IT, BFSI, healthcare, manufacturing, telecom
                 and government — from single-site refreshes to multi-state data
                 center sunsets.

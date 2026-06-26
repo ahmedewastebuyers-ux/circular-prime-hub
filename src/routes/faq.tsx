@@ -11,9 +11,9 @@ export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
       { title: "FAQ — E-Waste Buyers" },
-      { name: "description", content: "Answers to common questions about corporate e-waste procurement, IT asset recovery, bulk laptop and server buyback, logistics and compliance documentation." },
+      { name: "description", content: "Answers to common questions about corporate e-waste collection, IT equipment buyback, bulk laptop and server procurement, logistics and purchase documentation." },
       { property: "og:title", content: "FAQ — E-Waste Buyers" },
-      { property: "og:description", content: "Everything procurement, IT and compliance teams want to know." },
+      { property: "og:description", content: "Everything procurement and IT teams want to know about our buyback process." },
     ],
     links: [{ rel: "canonical", href: "/faq" }],
   }),
@@ -27,7 +27,7 @@ function FAQPage() {
       <main>
         <PageHero
           eyebrow="Frequently asked"
-          title="Answers for procurement, IT and compliance teams."
+          title="Answers for procurement and IT teams."
         />
         <section className="section-y">
           <div className="container-px mx-auto max-w-3xl">

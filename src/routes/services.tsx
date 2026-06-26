@@ -9,8 +9,8 @@ import { services } from "@/lib/site-data";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Asset Recovery Services — E-Waste Buyers" },
-      { name: "description", content: "IT asset recovery, bulk laptop procurement, server recovery, networking equipment purchase, data center decommissioning, industrial electronics recovery and corporate electronics buyback." },
+      { title: "IT Asset Recovery & E-Waste Buyback Services — E-Waste Buyers" },
+      { name: "description", content: "Server scrap buyers, laptop scrap buyers and electronics procurement: bulk laptop procurement, server recovery, networking equipment buyback, data center decommissioning and industrial electronics recovery." },
       { property: "og:title", content: "Services — E-Waste Buyers" },
       { property: "og:description", content: "Bulk buyback of servers, laptops, networking, industrial electronics and corporate e-waste." },
     ],

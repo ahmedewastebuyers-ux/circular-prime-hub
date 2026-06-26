@@ -10,9 +10,9 @@ export const Route = createFileRoute("/industries")({
   head: () => ({
     meta: [
       { title: "Industries We Serve — E-Waste Buyers" },
-      { name: "description", content: "Industry-specific IT asset recovery and e-waste disposal solutions for IT, data centers, manufacturing, BFSI, healthcare, telecom, government, education and OEMs." },
+      { name: "description", content: "Industry-specific IT equipment buyback and corporate e-waste collection for IT, data centers, manufacturing, BFSI, healthcare, telecom, government, education and OEMs." },
       { property: "og:title", content: "Industries — E-Waste Buyers" },
-      { property: "og:description", content: "Built for regulated enterprise environments across India." },
+      { property: "og:description", content: "Bulk corporate e-waste collection and IT asset recovery across enterprise sectors." },
     ],
     links: [{ rel: "canonical", href: "/industries" }],
   }),
@@ -27,7 +27,7 @@ function IndustriesPage() {
         <PageHero
           eyebrow="Industries"
           title="Industry-specific solutions."
-          subtitle="Compliance, security and recovery tuned to the operating constraints of your sector."
+          subtitle="Bulk buyback and pickup tuned to the operating realities of your sector."
           bgImage="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1920&q=70"
           bgAlt="Enterprise server racks and corporate IT infrastructure"
         />

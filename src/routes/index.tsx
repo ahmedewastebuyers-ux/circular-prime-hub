@@ -16,11 +16,11 @@ import { industries, services, why, cases, faqs, siteImages, PHONE_TEL, WHATSAPP
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "E-Waste Buyers — IT Asset Recovery & Corporate E-Waste Procurement in India" },
+      { title: "E-Waste Buyers — Bulk IT Asset Recovery & Corporate E-Waste Procurement in India" },
       {
         name: "description",
         content:
-          "We buy retired IT assets, servers, networking equipment, laptops, industrial electronics and corporate e-waste in bulk. Pan-India IT asset recovery and CPCB-compliant procurement.",
+          "We buy retired IT assets, servers, networking equipment, laptops, industrial electronics and corporate e-waste in bulk. Pan-India IT equipment buyback and electronics procurement.",
       },
       { property: "og:title", content: "E-Waste Buyers — Corporate IT Asset Recovery & Procurement" },
       {
@@ -105,7 +105,7 @@ function Hero() {
         <div className="max-w-3xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-semibold tracking-[0.18em] uppercase text-white/80 backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-forest" />
-            CPCB Authorised · ISO 14001 · ISO 27001
+            Bulk IT Asset Recovery & E-Waste Procurement
           </span>
 
           <h1 className="font-display mt-8 text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
@@ -255,7 +255,7 @@ function WhyUs() {
   return (
     <Section
       eyebrow="Why choose us"
-      title="The operational standards procurement and compliance teams expect."
+      title="The operational standards enterprise procurement teams expect."
     >
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {why.map((w) => (
