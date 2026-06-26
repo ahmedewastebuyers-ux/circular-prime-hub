@@ -27,7 +27,7 @@ function CaseStudiesPage() {
         <PageHero
           eyebrow="Case studies"
           title="Enterprises that trust our process."
-          subtitle="Real engagements. Real numbers. Audit-clear outcomes."
+          subtitle="Real engagements. Real numbers. On-time delivery."
           bgImage="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1920&q=70"
           bgAlt="Enterprise data center server racks"
         />
