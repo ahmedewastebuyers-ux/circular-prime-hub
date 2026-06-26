@@ -117,12 +117,12 @@ export const assets = [
 ];
 
 export const why = [
-  { icon: Globe2, title: "Pan India Collection", desc: "Operations across 28 states." },
-  { icon: Truck, title: "Secure Logistics", desc: "GPS-tracked, insured, tamper-evident." },
-  { icon: Gauge, title: "Transparent Valuation", desc: "Line-item pricing, no hidden deductions." },
-  { icon: FileCheck2, title: "Compliance Documentation", desc: "Audit-ready paperwork, every time." },
-  { icon: Users, title: "Dedicated Account Managers", desc: "Named POC for every enterprise." },
-  { icon: ShieldCheck, title: "Certified Recycling Partners", desc: "CPCB authorised facilities only." },
+  { icon: Gauge, title: "Fast Asset Evaluation", desc: "Site-level or remote valuation turned around within 24–48 hours of inquiry." },
+  { icon: Truck, title: "Bulk Corporate Pickups", desc: "Insured, GPS-tracked logistics for single-site and multi-site decommissions." },
+  { icon: ShieldCheck, title: "Transparent Pricing", desc: "Line-item valuation per asset — no hidden deductions or post-pickup repricing." },
+  { icon: HardDrive, title: "Enterprise Asset Recovery", desc: "Buyback of servers, laptops, networking, industrial electronics and PCB scrap." },
+  { icon: Globe2, title: "Pan India Service Network", desc: "Operational footprint across major industrial corridors and metros." },
+  { icon: Users, title: "Dedicated Support", desc: "A named point of contact from inquiry to final handover and documentation." },
 ];
 
 export const cases = [
