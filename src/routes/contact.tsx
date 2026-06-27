@@ -43,15 +43,6 @@ function ContactPage() {
           </div>
         </section>
 
-        <section className="section-y bg-charcoal text-white">
-          <div className="container-px mx-auto max-w-7xl">
-            <div className="grid gap-14 lg:grid-cols-2">
-              <QuoteForm />
-              <InspectionForm />
-            </div>
-          </div>
-        </section>
-
         <section className="section-y">
           <div className="container-px mx-auto max-w-7xl">
             <div className="grid gap-8 lg:grid-cols-[1fr_2fr]">
