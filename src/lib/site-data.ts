@@ -220,10 +220,10 @@ export const processSteps = [
   { code: "06", label: "GST Invoice & Payment" },
 ];
 
-export const PHONE = "+91 98801 12263";
-export const PHONE_TEL = "+919880112263";
-export const WHATSAPP = "919880112263";
-export const EMAIL = "enterprise@ewastebuyers.com";
+export const PHONE = "+91 97311 24511";
+export const PHONE_TEL = "+919731124511";
+export const WHATSAPP = "919731124511";
+export const EMAIL = "Mohammedraheem8765@gmail.com";
 export const BUSINESS_ADDRESS = "No. 66, 13th C Block, 6th Cross, Cheluvappa Garden, Ramdas Layout, K.P. Agrahara, Bengaluru, Karnataka 560023, India";
 export const BUSINESS_STREET_ADDRESS = "No. 66, 13th C Block, 6th Cross, Cheluvappa Garden, Ramdas Layout, K.P. Agrahara";
 export const BUSINESS_LOCALITY = "Bengaluru";

@@ -60,7 +60,7 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href="tel:+919880112263"
+            href="tel:+919731124511"
             className="inline-flex items-center gap-2 text-sm font-semibold text-charcoal"
           >
             <Phone className="h-4 w-4 text-forest" />
