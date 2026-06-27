@@ -103,50 +103,92 @@ function Hero() {
           loading="eager"
           decoding="async"
           fetchPriority="high"
-          className="h-full w-full object-cover opacity-30"
+          className="h-full w-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/85 to-charcoal/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/90 to-charcoal/60" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,oklch(0.38_0.07_160_/_0.35),transparent_60%)]" />
       </div>
 
-
       <div className="container-px mx-auto max-w-7xl pb-24 md:pb-36">
-        <div className="max-w-3xl">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-semibold tracking-[0.18em] uppercase text-white/80 backdrop-blur">
-            <span className="h-1.5 w-1.5 rounded-full bg-forest" />
-            Bulk IT Asset Recovery & E-Waste Procurement
-          </span>
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="max-w-2xl">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-semibold tracking-[0.18em] uppercase text-white/80 backdrop-blur">
+              <span className="h-1.5 w-1.5 rounded-full bg-forest" />
+              Bulk IT Asset Recovery & E-Waste Procurement
+            </span>
 
-          <h1 className="font-display mt-8 text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
-            We Buy Retired IT Assets{" "}
-            <span className="text-forest">&</span> Corporate E-Waste
-          </h1>
+            <h1 className="font-display mt-8 text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl lg:text-6xl xl:text-7xl">
+              We Buy Retired IT Assets{" "}
+              <span className="text-forest">&</span> Corporate E-Waste
+            </h1>
 
-          <p className="mt-7 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
-            Bulk buyback of servers, networking equipment, laptops, industrial
-            electronics and corporate e-waste — with transparent valuation and
-            pan-India pickup.
-          </p>
+            <p className="mt-7 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
+              Bulk buyback of servers, networking equipment, laptops, industrial
+              electronics and corporate e-waste — with transparent valuation and
+              pan-India pickup.
+            </p>
 
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <Link
-              to="/contact"
-              hash="quote"
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-forest px-7 text-sm font-semibold text-forest-foreground shadow-lg shadow-black/30 transition-all hover:bg-forest/90"
-            >
-              Request Quote <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              to="/contact"
-              hash="inspection"
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-md border border-white/20 bg-white/5 px-7 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-white/10"
-            >
-              Schedule Inspection
-            </Link>
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+              <Link
+                to="/contact"
+                hash="quote"
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-forest px-7 text-sm font-semibold text-forest-foreground shadow-lg shadow-black/30 transition-all hover:bg-forest/90"
+              >
+                Request Quote <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/contact"
+                hash="inspection"
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-md border border-white/20 bg-white/5 px-7 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-white/10"
+              >
+                Schedule Inspection
+              </Link>
+            </div>
           </div>
+
+          <HeroVideo />
         </div>
       </div>
     </section>
+  );
+}
+
+function HeroVideo() {
+  return (
+    <div className="relative w-full">
+      <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-charcoal shadow-2xl shadow-black/40 aspect-[4/3] sm:aspect-video lg:aspect-[4/3]">
+        <video
+          src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4"
+          poster="https://images.pexels.com/videos/3209828/free-video-3209828.jpg?auto=compress&cs=tinysrgb&w=1280"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-label="Enterprise server racks and IT infrastructure in a corporate data center"
+          className="h-full w-full object-cover"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-charcoal/40 via-transparent to-transparent" />
+
+        <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-[18rem] animate-fade-in">
+          <div className="flex items-start gap-3 rounded-xl border border-white/10 bg-charcoal/70 px-4 py-3 backdrop-blur-md">
+            <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-forest/20 text-forest">
+              <svg viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" aria-hidden="true">
+                <path fillRule="evenodd" d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.5 7.566a1 1 0 0 1-1.42.006L3.29 9.796a1 1 0 1 1 1.42-1.408l3.787 3.82 6.793-6.852a1 1 0 0 1 1.414-.066Z" clipRule="evenodd" />
+              </svg>
+            </span>
+            <div className="min-w-0">
+              <div className="text-xs font-bold leading-tight text-white">
+                Corporate IT Asset Recovery
+              </div>
+              <div className="mt-1 text-[10px] leading-snug text-white/70">
+                Professional Collection • Secure Logistics • Enterprise E-Waste Solutions
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
