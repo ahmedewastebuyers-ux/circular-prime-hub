@@ -158,14 +158,13 @@ function HeroVideo() {
     <div className="relative w-full">
       <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-charcoal shadow-2xl shadow-black/40 aspect-[4/3] sm:aspect-video lg:aspect-[4/3]">
         <video
-          src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4"
-          poster="https://images.pexels.com/videos/3209828/free-video-3209828.jpg?auto=compress&cs=tinysrgb&w=1280"
+          src="/__l5e/assets-v1/d9c93807-57ed-4d68-9176-8cf4a91a3434/hero-datacenter.mp4"
           autoPlay
           muted
           loop
           playsInline
           preload="metadata"
-          aria-label="Enterprise server racks and IT infrastructure in a corporate data center"
+          aria-label="Professional data center server racks and enterprise IT infrastructure"
           className="h-full w-full object-cover"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-charcoal/40 via-transparent to-transparent" />
