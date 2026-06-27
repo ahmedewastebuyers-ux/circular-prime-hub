@@ -140,7 +140,7 @@ function buildEmailText(data: z.infer<typeof contactSchema>, submissionTime: str
 }
 
 export const submitContactEnquiry = createServerFn({ method: "POST" })
-  .validator(contactSchema)
+  .inputValidator((data: unknown) => contactSchema.parse(data))
   .handler(async ({ data }) => {
     const apiKey = process.env.RESEND_API_KEY;
 
