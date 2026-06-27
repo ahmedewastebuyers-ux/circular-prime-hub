@@ -5,7 +5,7 @@ export function StickyActions() {
     <>
       <div className="fixed right-4 bottom-24 z-30 flex flex-col gap-3 md:bottom-8">
         <a
-          href="https://wa.me/919880112263?text=Hi%2C%20I%27d%20like%20a%20corporate%20e-waste%20quote."
+          href="https://wa.me/919731124511?text=Hi%2C%20I%27d%20like%20a%20corporate%20e-waste%20quote."
           target="_blank"
           rel="noreferrer"
           aria-label="WhatsApp us"
@@ -14,7 +14,7 @@ export function StickyActions() {
           <MessageCircle className="h-5 w-5" />
         </a>
         <a
-          href="tel:+919880112263"
+          href="tel:+919731124511"
           aria-label="Call now"
           className="grid h-12 w-12 place-items-center rounded-full bg-forest text-forest-foreground shadow-lg shadow-black/20 transition-transform hover:scale-105"
         >

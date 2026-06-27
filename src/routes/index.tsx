@@ -158,7 +158,7 @@ function HeroVideo() {
     <div className="relative w-full">
       <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-charcoal shadow-2xl shadow-black/40 aspect-[4/3] sm:aspect-video lg:aspect-[4/3]">
         <video
-          src="/__l5e/assets-v1/d9c93807-57ed-4d68-9176-8cf4a91a3434/hero-datacenter.mp4"
+          src="/__l5e/assets-v1/1795505e-af10-41d3-a2fd-466c9ce44c98/hero-datacenter-v2.mp4"
           autoPlay
           muted
           loop
@@ -476,7 +476,7 @@ function CTA() {
         <p className="mt-8 text-xs text-white/50">
           Or call us directly:{" "}
           <a href={`tel:${PHONE_TEL}`} className="font-semibold text-white hover:text-forest">
-            +91 98801 12263
+            +91 97311 24511
           </a>
         </p>
       </div>
