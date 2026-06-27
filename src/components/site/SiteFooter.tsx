@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Leaf, Mail, MapPin, Phone, Linkedin, Twitter, Facebook } from "lucide-react";
-import { EMAIL, PHONE, PHONE_TEL } from "@/lib/site-data";
+import { BUSINESS_ADDRESS, EMAIL, PHONE, PHONE_TEL } from "@/lib/site-data";
 
 const serviceLinks = [
   "IT Asset Recovery",
@@ -86,7 +86,7 @@ export function SiteFooter() {
             <ul className="mt-5 space-y-4 text-sm text-white/70">
               <li className="flex gap-3">
                 <MapPin className="h-4 w-4 shrink-0 text-forest" />
-                <span>Plot 42, Industrial Area Phase II, Gurugram, Haryana 122016</span>
+                <span>{BUSINESS_ADDRESS}</span>
               </li>
               <li className="flex gap-3">
                 <Phone className="h-4 w-4 shrink-0 text-forest" />
