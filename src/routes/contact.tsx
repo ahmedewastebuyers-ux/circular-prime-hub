@@ -43,6 +43,48 @@ function ContactPage() {
           </div>
         </section>
 
+        <section className="section-y bg-charcoal text-white">
+  <div className="container-px mx-auto max-w-4xl text-center">
+
+    <h2 className="font-display text-3xl font-bold">
+      Ready to Sell Your E-Waste?
+    </h2>
+
+    <p className="mt-4 text-white/70">
+      Contact our team directly by phone, WhatsApp or email.
+      We'll provide a free quotation and schedule pickup.
+    </p>
+
+    <div className="mt-10 flex flex-wrap justify-center gap-4">
+
+      <a
+        href={`tel:${PHONE_TEL}`}
+        className="rounded-lg bg-forest px-6 py-3 font-semibold text-white"
+      >
+        Call Now
+      </a>
+
+      <a
+        href={`https://wa.me/${WHATSAPP}`}
+        target="_blank"
+        rel="noreferrer"
+        className="rounded-lg border border-white/20 px-6 py-3 font-semibold"
+      >
+        WhatsApp
+      </a>
+
+      <a
+        href={`mailto:${EMAIL}`}
+        className="rounded-lg border border-white/20 px-6 py-3 font-semibold"
+      >
+        Email Us
+      </a>
+
+    </div>
+
+  </div>
+</section>
+        
         <section className="section-y">
           <div className="container-px mx-auto max-w-7xl">
             <div className="grid gap-8 lg:grid-cols-[1fr_2fr]">
