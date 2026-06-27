@@ -1,5 +1,7 @@
+import { useRef, useState } from "react";
 import { ArrowRight, Upload, Calendar } from "lucide-react";
 import { industries, assets } from "@/lib/site-data";
+import { submitContactEnquiry } from "@/lib/api/contact.functions";
 
 function Input(props: React.InputHTMLAttributes<HTMLInputElement>) {
   const { className = "", ...rest } = props;
@@ -29,6 +31,79 @@ function Select(props: React.SelectHTMLAttributes<HTMLSelectElement>) {
 }
 
 export function QuoteForm() {
+  const [status, setStatus] = useState<{ type: "success" | "error"; message: string } | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const activeSubmissionRef = useRef(false);
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (activeSubmissionRef.current) {
+      return;
+    }
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const fullName = String(formData.get("name") || "").trim();
+    const companyName = String(formData.get("company") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const phoneNumber = String(formData.get("phone") || "").trim();
+    const city = String(formData.get("city") || "").trim();
+    const industry = String(formData.get("industry") || "").trim();
+    const asset = String(formData.get("asset") || "").trim();
+    const message = String(formData.get("notes") || "").trim();
+
+    if (!fullName || !companyName || !email || !phoneNumber) {
+      setStatus({ type: "error", message: "Please complete all required fields." });
+      return;
+    }
+
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      setStatus({ type: "error", message: "Please enter a valid business email address." });
+      return;
+    }
+
+    if (phoneNumber.replace(/\D/g, "").length < 7) {
+      setStatus({ type: "error", message: "Please enter a valid phone number." });
+      return;
+    }
+
+    activeSubmissionRef.current = true;
+    setIsSubmitting(true);
+    setStatus(null);
+
+    try {
+      await submitContactEnquiry({
+        data: {
+          fullName,
+          companyName,
+          email,
+          phoneNumber,
+          city,
+          serviceRequired: asset || industry,
+          message,
+        },
+      });
+
+      form.reset();
+      setStatus({
+        type: "success",
+        message: "Thanks — our enterprise team will reach out within 1 business day.",
+      });
+    } catch (error) {
+      setStatus({
+        type: "error",
+        message:
+          error instanceof Error
+            ? error.message
+            : "Unable to send enquiry right now. Please try again later.",
+      });
+    } finally {
+      activeSubmissionRef.current = false;
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <div id="quote">
       <span className="eyebrow text-forest">Corporate quote request</span>
@@ -36,17 +111,11 @@ export function QuoteForm() {
         Get a transparent enterprise quote in 48 hours.
       </h2>
       <p className="mt-4 text-sm leading-relaxed text-white/70">
-        Share your retirement scope and our enterprise team will respond with a formal,
-        line-item proposal — no obligation, full NDA.
+        Share your retirement scope and our enterprise team will respond with a formal, line-item
+        proposal — no obligation, full NDA.
       </p>
 
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          alert("Thanks — our enterprise team will reach out within 1 business day.");
-        }}
-        className="mt-8 grid gap-3 sm:grid-cols-2"
-      >
+      <form onSubmit={handleSubmit} className="mt-8 grid gap-3 sm:grid-cols-2">
         <Input name="name" placeholder="Full name *" required />
         <Input name="company" placeholder="Company name *" required />
         <Input name="designation" placeholder="Designation" />
@@ -84,10 +153,22 @@ export function QuoteForm() {
         />
         <button
           type="submit"
-          className="sm:col-span-2 mt-2 inline-flex h-12 items-center justify-center gap-2 rounded-md bg-forest text-sm font-semibold text-forest-foreground transition-colors hover:bg-forest/90"
+          disabled={isSubmitting}
+          className="sm:col-span-2 mt-2 inline-flex h-12 items-center justify-center gap-2 rounded-md bg-forest text-sm font-semibold text-forest-foreground transition-colors hover:bg-forest/90 disabled:cursor-not-allowed disabled:opacity-70"
         >
-          Request Corporate Quote <ArrowRight className="h-4 w-4" />
+          {isSubmitting ? "Sending..." : "Request Corporate Quote"}{" "}
+          <ArrowRight className="h-4 w-4" />
         </button>
+        {status && (
+          <p
+            className={
+              "sm:col-span-2 text-sm " +
+              (status.type === "success" ? "text-forest" : "text-red-300")
+            }
+          >
+            {status.message}
+          </p>
+        )}
       </form>
     </div>
   );
@@ -101,8 +182,8 @@ export function InspectionForm() {
         Schedule a free on-site inventory assessment.
       </h3>
       <p className="mt-3 text-sm leading-relaxed text-white/70">
-        For orders over 100 units we visit your facility, audit inventory, and provide a
-        formal valuation — usually within 5 working days.
+        For orders over 100 units we visit your facility, audit inventory, and provide a formal
+        valuation — usually within 5 working days.
       </p>
 
       <form
@@ -132,7 +213,11 @@ export function InspectionForm() {
             </option>
           ))}
         </Select>
-        <Input name="volume" placeholder="Estimated volume (units / kg)" className="sm:col-span-2" />
+        <Input
+          name="volume"
+          placeholder="Estimated volume (units / kg)"
+          className="sm:col-span-2"
+        />
         <button
           type="submit"
           className="sm:col-span-2 mt-2 inline-flex h-12 items-center justify-center gap-2 rounded-md border border-white/20 bg-white/5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
