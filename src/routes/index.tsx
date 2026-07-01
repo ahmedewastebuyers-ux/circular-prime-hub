@@ -347,9 +347,10 @@ function WhyUs() {
   );
 }
 
-/* ---------- Case Studies (3) ---------- */
+/* ---------- Case Studies (3, from CMS) ---------- */
 function CasesPreview() {
-  const three = cases.slice(0, 3);
+  const { data, isLoading } = useQuery(caseStudiesQuery);
+  const three = (data ?? []).slice(0, 3);
   return (
     <section className="section-y bg-sand/30">
       <div className="container-px mx-auto max-w-7xl">
@@ -361,46 +362,62 @@ function CasesPreview() {
         </div>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {three.map((c) => (
-            <article
-              key={c.title}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-forest/5"
-            >
-              <div className="relative h-44 overflow-hidden bg-charcoal">
-                <img
-                  src={c.image}
-                  alt={c.alt}
-                  width={800}
-                  height={400}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/30 to-transparent" />
-                <div className="absolute inset-x-6 bottom-6">
-                  <span className="inline-flex rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-white backdrop-blur">
-                    {c.tag}
-                  </span>
+          {isLoading && !data
+            ? Array.from({ length: 3 }).map((_, i) => (
+                <div key={i} className="overflow-hidden rounded-2xl border border-border bg-card">
+                  <Skeleton className="h-44 w-full rounded-none" />
+                  <div className="p-7"><Skeleton className="h-5 w-3/4" /><Skeleton className="mt-3 h-16 w-full" /></div>
                 </div>
-              </div>
-
-              <div className="flex flex-1 flex-col p-7">
-                <h3 className="font-display text-lg font-bold leading-snug text-charcoal">
-                  {c.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.desc}</p>
-                <div className="mt-6 grid grid-cols-3 gap-3 border-t border-border pt-5">
-                  {c.stats.map((s) => (
-                    <div key={s.l}>
-                      <div className="font-display text-base font-bold text-forest">{s.v}</div>
-                      <div className="mt-0.5 text-[10px] uppercase tracking-wider text-muted-foreground">{s.l}</div>
+              ))
+            : three.map((c, idx) => (
+                <article
+                  key={`${c.company}-${idx}`}
+                  className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-forest/5"
+                >
+                  <div className="relative h-44 overflow-hidden bg-charcoal">
+                    {c.image && (
+                      <img
+                        src={c.image}
+                        alt={`${c.company} — ${c.material}`}
+                        width={800}
+                        height={400}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/30 to-transparent" />
+                    <div className="absolute inset-x-6 bottom-6">
+                      <span className="inline-flex rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-white backdrop-blur">
+                        {c.industry}
+                      </span>
                     </div>
-                  ))}
-                </div>
-              </div>
-            </article>
-          ))}
+                  </div>
+
+                  <div className="flex flex-1 flex-col p-7">
+                    <h3 className="font-display text-lg font-bold leading-snug text-charcoal">
+                      {c.company}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.description}</p>
+                    <div className="mt-6 grid grid-cols-3 gap-3 border-t border-border pt-5">
+                      <div>
+                        <div className="font-display text-base font-bold text-forest">{c.quantity}</div>
+                        <div className="mt-0.5 text-[10px] uppercase tracking-wider text-muted-foreground">Quantity</div>
+                      </div>
+                      <div>
+                        <div className="font-display text-base font-bold text-forest">{c.location}</div>
+                        <div className="mt-0.5 text-[10px] uppercase tracking-wider text-muted-foreground">Location</div>
+                      </div>
+                      <div>
+                        <div className="font-display text-base font-bold text-forest">{c.date}</div>
+                        <div className="mt-0.5 text-[10px] uppercase tracking-wider text-muted-foreground">Date</div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              ))}
         </div>
+
 
         <div className="mt-10 text-center">
           <Link
