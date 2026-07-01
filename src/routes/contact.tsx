@@ -4,7 +4,8 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { StickyActions } from "@/components/site/StickyActions";
 import { PageHero, PageShell } from "@/components/site/PageHero";
-import { BUSINESS_ADDRESS, PHONE, PHONE_TEL, EMAIL, WHATSAPP, siteImages } from "@/lib/site-data";
+import { BUSINESS_ADDRESS, siteImages } from "@/lib/site-data";
+import { useSettings } from "@/hooks/useSettings";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -20,6 +21,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
+  const s = useSettings();
   return (
     <PageShell>
       <SiteHeader />
@@ -36,9 +38,9 @@ function ContactPage() {
         <section className="section-y">
           <div className="container-px mx-auto max-w-7xl">
             <div className="grid gap-6 md:grid-cols-3">
-              <ContactCard icon={PhoneCall} title="Sales hotline" primary={PHONE} href={`tel:${PHONE_TEL}`} sub="Mon–Sat · 9am–7pm IST" />
-              <ContactCard icon={Mail} title="Enterprise email" primary={EMAIL} href={`mailto:${EMAIL}`} sub="Response within 4 hours" />
-              <ContactCard icon={MessageCircle} title="WhatsApp" primary="Chat with our team" href={`https://wa.me/${WHATSAPP}?text=Hi%2C%20I%27d%20like%20a%20corporate%20e-waste%20quote.`} sub="Quickest response" />
+              <ContactCard icon={PhoneCall} title="Sales hotline" primary={s.phone} href={`tel:${s.phoneTel}`} sub="Mon–Sat · 9am–7pm IST" />
+              <ContactCard icon={Mail} title="Enterprise email" primary={s.email} href={`mailto:${s.email}`} sub="Response within 4 hours" />
+              <ContactCard icon={MessageCircle} title="WhatsApp" primary="Chat with our team" href={`https://wa.me/${s.whatsapp}?text=Hi%2C%20I%27d%20like%20a%20corporate%20e-waste%20quote.`} sub="Quickest response" />
             </div>
           </div>
         </section>
@@ -58,14 +60,14 @@ function ContactPage() {
     <div className="mt-10 flex flex-wrap justify-center gap-4">
 
       <a
-        href={`tel:${PHONE_TEL}`}
+        href={`tel:${s.phoneTel}`}
         className="rounded-lg bg-forest px-6 py-3 font-semibold text-white"
       >
         Call Now
       </a>
 
       <a
-        href={`https://wa.me/${WHATSAPP}`}
+        href={`https://wa.me/${s.whatsapp}`}
         target="_blank"
         rel="noreferrer"
         className="rounded-lg border border-white/20 px-6 py-3 font-semibold"
@@ -74,7 +76,7 @@ function ContactPage() {
       </a>
 
       <a
-        href={`mailto:${EMAIL}`}
+        href={`mailto:${s.email}`}
         className="rounded-lg border border-white/20 px-6 py-3 font-semibold"
       >
         Email Us
@@ -95,7 +97,7 @@ function ContactPage() {
                 </h2>
                 <p className="mt-5 flex items-start gap-3 text-sm text-muted-foreground">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-forest" />
-                  {BUSINESS_ADDRESS}
+                  {s.address}
                 </p>
               </div>
               <div className="overflow-hidden rounded-2xl border border-border bg-card">
