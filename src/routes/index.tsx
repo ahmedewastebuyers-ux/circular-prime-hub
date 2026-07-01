@@ -475,6 +475,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 
 /* ---------- CTA ---------- */
 function CTA() {
+  const s = useSettings();
   return (
     <section className="section-y bg-charcoal text-white">
       <div className="container-px mx-auto max-w-5xl text-center">
@@ -502,7 +503,7 @@ function CTA() {
             <Calendar className="h-4 w-4 text-forest" /> Schedule Inspection
           </Link>
           <a
-            href={`https://wa.me/${WHATSAPP}?text=Hi%2C%20I%27d%20like%20a%20corporate%20e-waste%20quote.`}
+            href={`https://wa.me/${s.whatsapp}?text=Hi%2C%20I%27d%20like%20a%20corporate%20e-waste%20quote.`}
             target="_blank"
             rel="noreferrer"
             className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-[#25D366] px-7 text-sm font-semibold text-white transition-colors hover:bg-[#25D366]/90 sm:w-auto"
