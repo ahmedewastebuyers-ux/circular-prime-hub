@@ -10,7 +10,14 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { StickyActions } from "@/components/site/StickyActions";
 import { Section } from "@/components/site/Section";
-import { industries, services, why, cases, faqs, siteImages, PHONE_TEL, WHATSAPP, BUSINESS_STREET_ADDRESS, BUSINESS_LOCALITY, BUSINESS_REGION, BUSINESS_POSTAL_CODE, BUSINESS_COUNTRY } from "@/lib/site-data";
+import { StatsSection } from "@/components/site/StatsSection";
+import { TestimonialsSection } from "@/components/site/TestimonialsSection";
+import { ClientLogosSection } from "@/components/site/ClientLogosSection";
+import { industries, services, why, faqs, siteImages, BUSINESS_STREET_ADDRESS, BUSINESS_LOCALITY, BUSINESS_REGION, BUSINESS_POSTAL_CODE, BUSINESS_COUNTRY } from "@/lib/site-data";
+import { useSettings } from "@/hooks/useSettings";
+import { useQuery } from "@tanstack/react-query";
+import { caseStudiesQuery } from "@/lib/cms/queries";
+import { Skeleton } from "@/components/ui/skeleton";
 import heroVideoAsset from "@/assets/hero-datacenter-v2.mp4.asset.json";
 import heroPoster from "@/assets/hero-datacenter-poster.jpg";
 
@@ -80,10 +87,13 @@ function HomePage() {
       <SiteHeader />
       <main>
         <Hero />
+        <ClientLogosSection />
+        <StatsSection />
         <IndustriesPreview />
         <ServicesPreview />
         <WhyUs />
         <CasesPreview />
+        <TestimonialsSection />
         <FAQPreview />
         <CTA />
       </main>
