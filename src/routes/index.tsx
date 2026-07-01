@@ -513,8 +513,8 @@ function CTA() {
         </div>
         <p className="mt-8 text-xs text-white/50">
           Or call us directly:{" "}
-          <a href={`tel:${PHONE_TEL}`} className="font-semibold text-white hover:text-forest">
-            +91 97311 24511
+          <a href={`tel:${s.phoneTel}`} className="font-semibold text-white hover:text-forest">
+            {s.phone}
           </a>
         </p>
       </div>
