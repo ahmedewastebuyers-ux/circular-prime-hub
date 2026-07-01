@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Leaf, Mail, MapPin, Phone, Linkedin, Twitter, Facebook } from "lucide-react";
-import { BUSINESS_ADDRESS, EMAIL, PHONE, PHONE_TEL } from "@/lib/site-data";
+import { useSettings } from "@/hooks/useSettings";
 
 const serviceLinks = [
   "IT Asset Recovery",
@@ -24,6 +24,7 @@ const companyLinks: { label: string; to: "/services" | "/industries" | "/complia
 ];
 
 export function SiteFooter() {
+  const s = useSettings();
   return (
     <footer className="bg-charcoal text-charcoal-foreground">
       <div className="container-px mx-auto max-w-7xl py-16">
@@ -86,15 +87,15 @@ export function SiteFooter() {
             <ul className="mt-5 space-y-4 text-sm text-white/70">
               <li className="flex gap-3">
                 <MapPin className="h-4 w-4 shrink-0 text-forest" />
-                <span>{BUSINESS_ADDRESS}</span>
+                <span>{s.address}</span>
               </li>
               <li className="flex gap-3">
                 <Phone className="h-4 w-4 shrink-0 text-forest" />
-                <a href={`tel:${PHONE_TEL}`} className="hover:text-white">{PHONE}</a>
+                <a href={`tel:${s.phoneTel}`} className="hover:text-white">{s.phone}</a>
               </li>
               <li className="flex gap-3">
                 <Mail className="h-4 w-4 shrink-0 text-forest" />
-                <a href={`mailto:${EMAIL}`} className="hover:text-white">{EMAIL}</a>
+                <a href={`mailto:${s.email}`} className="hover:text-white">{s.email}</a>
               </li>
             </ul>
           </div>
