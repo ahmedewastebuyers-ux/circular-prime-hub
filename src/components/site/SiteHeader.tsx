@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, Leaf, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useSettings } from "@/hooks/useSettings";
 
 const nav = [
   { label: "Services", to: "/services" as const },
@@ -13,6 +14,7 @@ const nav = [
 ];
 
 export function SiteHeader() {
+  const settings = useSettings();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -60,11 +62,11 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href="tel:+919731124511"
+            href={`tel:${settings.phoneTel}`}
             className="inline-flex items-center gap-2 text-sm font-semibold text-charcoal"
           >
             <Phone className="h-4 w-4 text-forest" />
-            +91 97311 24511
+            {settings.phone}
           </a>
           <Link
             to="/contact"
