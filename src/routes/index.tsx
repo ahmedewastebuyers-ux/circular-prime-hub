@@ -11,6 +11,8 @@ import { SiteFooter } from "@/components/site/SiteFooter";
 import { StickyActions } from "@/components/site/StickyActions";
 import { Section } from "@/components/site/Section";
 import { industries, services, why, cases, faqs, siteImages, PHONE_TEL, WHATSAPP, BUSINESS_STREET_ADDRESS, BUSINESS_LOCALITY, BUSINESS_REGION, BUSINESS_POSTAL_CODE, BUSINESS_COUNTRY } from "@/lib/site-data";
+import heroVideoAsset from "@/assets/hero-datacenter-v2.mp4.asset.json";
+import heroPoster from "@/assets/hero-datacenter-poster.jpg";
 
 
 export const Route = createFileRoute("/")({
@@ -154,19 +156,27 @@ function Hero() {
 }
 
 function HeroVideo() {
+  const videoUrl = heroVideoAsset.url;
   return (
     <div className="relative w-full">
       <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-charcoal shadow-2xl shadow-black/40 aspect-[4/3] sm:aspect-video lg:aspect-[4/3]">
         <video
-          src="/__l5e/assets-v1/1795505e-af10-41d3-a2fd-466c9ce44c98/hero-datacenter-v2.mp4"
           autoPlay
           muted
           loop
           playsInline
           preload="metadata"
+          poster={heroPoster}
           aria-label="Professional data center server racks and enterprise IT infrastructure"
           className="h-full w-full object-cover"
-        />
+        >
+          <source src={videoUrl} type="video/mp4" />
+          <img
+            src={heroPoster}
+            alt="Enterprise data center server racks"
+            className="h-full w-full object-cover"
+          />
+        </video>
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-charcoal/40 via-transparent to-transparent" />
 
         <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-[18rem] animate-fade-in">
