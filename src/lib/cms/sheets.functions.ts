@@ -6,6 +6,7 @@ const SHEET_IDS = {
   logos: "1eQjjKWGDGTIx_-u1XnHXZWvtzet8uKWUu29gHLydrjk",
   caseStudies: "1MHriJcpxIzyijP7N-N3nSSbuFP2gmVgYiIQ-jaCHoNk",
   settings: "1AId-4fQgDvzeSzwk2ctWvD7RbSaN19DFa70i3OMi2UY",
+  media: "1fFh8zHKeE-Q7JNg7DlX4qfjRC_FbWM3lG7prBTHsZtI",
 } as const;
 
 type SheetKey = keyof typeof SHEET_IDS;
