@@ -23,18 +23,36 @@ export function normalizeDriveImage(url: string, size = 1200): string {
 const isPublished = (v: string | undefined) =>
   (v ?? "").trim().toLowerCase() === "published";
 
+export const FALLBACK_STATS: Stat[] = [
+  { title: "Corporate Clients", value: "150+", icon: "users" },
+  { title: "IT Assets Recovered", value: "18,500+", icon: "monitor" },
+  { title: "E-Waste Processed", value: "520+ Tons", icon: "recycle" },
+  { title: "Cities Served", value: "25+", icon: "map-pin" },
+  { title: "Successful Projects", value: "850+", icon: "briefcase" },
+  { title: "Enterprise Customers", value: "120+", icon: "building-2" },
+  { title: "Average Response Time", value: "2 Hours", icon: "clock" },
+  { title: "On-Time Collections", value: "99%", icon: "check-circle" },
+];
+
 export const statsQuery = queryOptions({
   queryKey: ["cms", "stats"],
   staleTime: SIXTY,
+  placeholderData: FALLBACK_STATS,
   queryFn: async (): Promise<Stat[]> => {
-    const rows = await fetchStatsSheet();
-    return rows
-      .map((r) => ({
-        title: (r.title ?? "").trim(),
-        value: (r.value ?? "").trim(),
-        icon: (r.icon ?? "").trim().toLowerCase(),
-      }))
-      .filter((s) => s.title && s.value);
+    try {
+      const rows = await fetchStatsSheet();
+      const parsed = rows
+        .map((r) => ({
+          title: (r.title ?? "").trim(),
+          value: (r.value ?? "").trim(),
+          icon: (r.icon ?? "").trim().toLowerCase(),
+        }))
+        .filter((s) => s.title && s.value);
+      return parsed.length > 0 ? parsed : FALLBACK_STATS;
+    } catch (err) {
+      console.error("[cms] statsQuery failed, using fallback:", err);
+      return FALLBACK_STATS;
+    }
   },
 });
 
