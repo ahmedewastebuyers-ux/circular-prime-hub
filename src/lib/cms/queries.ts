@@ -5,6 +5,7 @@ import {
   fetchLogosSheet,
   fetchCaseStudiesSheet,
   fetchSettingsSheet,
+  fetchMediaSheet,
 } from "./sheets.functions";
 import type { Stat, Testimonial, ClientLogo, CaseStudy, Settings } from "./types";
 import { PHONE, PHONE_TEL, WHATSAPP, EMAIL, BUSINESS_ADDRESS } from "@/lib/site-data";
