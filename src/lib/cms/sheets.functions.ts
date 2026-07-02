@@ -90,3 +90,6 @@ export const fetchCaseStudiesSheet = createServerFn({ method: "GET" }).handler(a
 export const fetchSettingsSheet = createServerFn({ method: "GET" }).handler(async () =>
   fetchSheet("settings"),
 );
+export const fetchMediaSheet = createServerFn({ method: "GET" }).handler(async () =>
+  fetchSheet("media"),
+);
