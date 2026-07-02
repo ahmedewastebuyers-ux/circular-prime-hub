@@ -175,10 +175,26 @@ function HeroVideo() {
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
           poster={heroPoster}
           aria-label="Professional data center server racks and enterprise IT infrastructure"
           className="h-full w-full object-cover"
+          onError={(e) => {
+            const v = e.currentTarget;
+            const err = v.error;
+            // eslint-disable-next-line no-console
+            console.error("[hero-video] load failed", {
+              src: videoUrl,
+              code: err?.code,
+              message: err?.message,
+              networkState: v.networkState,
+              readyState: v.readyState,
+            });
+          }}
+          onLoadedData={() => {
+            // eslint-disable-next-line no-console
+            console.info("[hero-video] loaded", videoUrl);
+          }}
         >
           <source src={videoUrl} type="video/mp4" />
           <img
