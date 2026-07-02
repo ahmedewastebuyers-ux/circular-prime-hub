@@ -165,7 +165,8 @@ function Hero() {
 }
 
 function HeroVideo() {
-  const videoUrl = heroVideoAsset.url;
+  const { data: media } = useQuery(mediaQuery);
+  const videoUrl = media?.hero_video || FALLBACK_HERO_VIDEO;
   return (
     <div className="relative w-full">
       <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-charcoal shadow-2xl shadow-black/40 aspect-[4/3] sm:aspect-video lg:aspect-[4/3]">
