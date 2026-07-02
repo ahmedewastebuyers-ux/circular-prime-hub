@@ -55,15 +55,19 @@ async function fetchSheet(key: SheetKey): Promise<Record<string, string>[]> {
   const now = Date.now();
   const hit = cache.get(key);
   if (hit && now - hit.at < TTL_MS) return hit.data;
-  const url = `https://docs.google.com/spreadsheets/d/${SHEET_IDS[key]}/gviz/tq?tqx=out:csv`;
+  // Use `export?format=csv` — the gviz endpoint sometimes collapses
+  // multi-row sheets into a single row when the sheet has merged cells
+  // or chart ranges, which broke stats rendering in production.
+  const url = `https://docs.google.com/spreadsheets/d/${SHEET_IDS[key]}/export?format=csv`;
   try {
-    const res = await fetch(url, { headers: { accept: "text/csv" } });
+    const res = await fetch(url, { redirect: "follow", headers: { accept: "text/csv" } });
     if (!res.ok) throw new Error(`sheet ${key} http ${res.status}`);
     const text = await res.text();
     const data = toObjects(parseCSV(text));
     cache.set(key, { at: now, data });
     return data;
   } catch (err) {
+    console.error(`[cms] fetchSheet(${key}) failed:`, err);
     // Serve last-known-good on error.
     if (hit) return hit.data;
     throw err;
