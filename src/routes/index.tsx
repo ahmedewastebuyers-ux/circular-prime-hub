@@ -171,6 +171,7 @@ function HeroVideo() {
     <div className="relative w-full">
       <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-charcoal shadow-2xl shadow-black/40 aspect-[4/3] sm:aspect-video lg:aspect-[4/3]">
         <video
+          key={videoUrl}
           autoPlay
           muted
           loop
