@@ -16,9 +16,8 @@ import { ClientLogosSection } from "@/components/site/ClientLogosSection";
 import { industries, services, why, faqs, siteImages, BUSINESS_STREET_ADDRESS, BUSINESS_LOCALITY, BUSINESS_REGION, BUSINESS_POSTAL_CODE, BUSINESS_COUNTRY } from "@/lib/site-data";
 import { useSettings } from "@/hooks/useSettings";
 import { useQuery } from "@tanstack/react-query";
-import { caseStudiesQuery } from "@/lib/cms/queries";
+import { caseStudiesQuery, mediaQuery, FALLBACK_HERO_VIDEO } from "@/lib/cms/queries";
 import { Skeleton } from "@/components/ui/skeleton";
-import heroVideoAsset from "@/assets/hero-datacenter-v2.mp4.asset.json";
 import heroPoster from "@/assets/hero-datacenter-poster.jpg";
 
 
@@ -166,11 +165,13 @@ function Hero() {
 }
 
 function HeroVideo() {
-  const videoUrl = heroVideoAsset.url;
+  const { data: media } = useQuery(mediaQuery);
+  const videoUrl = media?.hero_video || FALLBACK_HERO_VIDEO;
   return (
     <div className="relative w-full">
       <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-charcoal shadow-2xl shadow-black/40 aspect-[4/3] sm:aspect-video lg:aspect-[4/3]">
         <video
+          key={videoUrl}
           autoPlay
           muted
           loop

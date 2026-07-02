@@ -5,6 +5,7 @@ import {
   fetchLogosSheet,
   fetchCaseStudiesSheet,
   fetchSettingsSheet,
+  fetchMediaSheet,
 } from "./sheets.functions";
 import type { Stat, Testimonial, ClientLogo, CaseStudy, Settings } from "./types";
 import { PHONE, PHONE_TEL, WHATSAPP, EMAIL, BUSINESS_ADDRESS } from "@/lib/site-data";
@@ -142,5 +143,31 @@ export const settingsQuery = queryOptions({
       email: normalizeEmail(map.email ?? "") || DEFAULT_SETTINGS.email,
       address: map.address || DEFAULT_SETTINGS.address,
     };
+  },
+});
+
+// --- Media (hero video, etc.) ---
+export const FALLBACK_HERO_VIDEO =
+  "https://res.cloudinary.com/uuo2xujh/video/upload/v1782981597/242599_1_auiumq.mp4";
+
+export const mediaQuery = queryOptions({
+  queryKey: ["cms", "media"],
+  staleTime: SIXTY,
+  placeholderData: { hero_video: FALLBACK_HERO_VIDEO } as Record<string, string>,
+  queryFn: async (): Promise<Record<string, string>> => {
+    try {
+      const rows = await fetchMediaSheet();
+      const map: Record<string, string> = {};
+      for (const r of rows) {
+        const key = (r.key ?? "").trim().toLowerCase();
+        const url = (r.url ?? "").trim();
+        if (key && url && isPublished(r.status)) map[key] = url;
+      }
+      if (!map.hero_video) map.hero_video = FALLBACK_HERO_VIDEO;
+      return map;
+    } catch (err) {
+      console.error("[cms] mediaQuery failed, using fallback:", err);
+      return { hero_video: FALLBACK_HERO_VIDEO };
+    }
   },
 });
