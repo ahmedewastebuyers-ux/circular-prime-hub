@@ -16,9 +16,8 @@ import { ClientLogosSection } from "@/components/site/ClientLogosSection";
 import { industries, services, why, faqs, siteImages, BUSINESS_STREET_ADDRESS, BUSINESS_LOCALITY, BUSINESS_REGION, BUSINESS_POSTAL_CODE, BUSINESS_COUNTRY } from "@/lib/site-data";
 import { useSettings } from "@/hooks/useSettings";
 import { useQuery } from "@tanstack/react-query";
-import { caseStudiesQuery } from "@/lib/cms/queries";
+import { caseStudiesQuery, mediaQuery, FALLBACK_HERO_VIDEO } from "@/lib/cms/queries";
 import { Skeleton } from "@/components/ui/skeleton";
-import heroVideoAsset from "@/assets/hero-datacenter-v2.mp4.asset.json";
 import heroPoster from "@/assets/hero-datacenter-poster.jpg";
 
 
